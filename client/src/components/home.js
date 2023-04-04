@@ -1,7 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
+import $ from "jquery"
+import Typed from "typed.js"
+
+
 function Home(){
+
+    useEffect(()=>{
+        if ($('.typed-text-output').length == 1) {
+            var typed_strings = $('.typed-text').text();
+            var typed = new Typed('.typed-text-output', {
+                strings: typed_strings.split(', '),
+                typeSpeed: 100,
+                backSpeed: 20,
+                smartBackspace: false,
+                loop: true
+            });
+        }
+    });   
+
     return (
         <div name='home' className='w-full h-screen bg-[#0a192f]'>
         {/* Container */}
@@ -13,9 +31,11 @@ function Home(){
             <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
             I'm a Front End and Sharepoint Developer.
             </h2>
+            <h2 className="typed-text-output d-inline"> </h2>
+            <div className="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
             <p className='text-[#8892b0] py-4 max-w-[700px]'>
-            I’m a web developer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I’m focused on
+            I'm a web developer specializing in building (and occasionally
+            designing) exceptional digital experiences. Currently, I'm focused on
             building responsive web applications.
             </p>
             <div>

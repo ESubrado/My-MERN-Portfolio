@@ -6,7 +6,7 @@ const useScript = (url) => {
     const script = document.createElement('script')
     script.src = url
     script.async = true
-    script.type = 'text/babel'
+    script.type = 'text/javascript'
     element.appendChild(script)
     return () => {
       element.removeChild(script)
