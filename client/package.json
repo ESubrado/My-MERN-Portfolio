@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/react-helmet": "^6.1.6",
     "baseui": "^12.2.0",
     "bootstrap": "^5.2.0",
     "jquery": "^3.6.4",
@@ -50,5 +51,9 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16"
+  },
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
   }
 }

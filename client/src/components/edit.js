@@ -8,13 +8,13 @@ export default function Edit() {
    level: "",
    records: [],
  });
- const params = useParams();
+ let params = useParams();
  const navigate = useNavigate();
  
  useEffect(() => {
    async function fetchData() {
-     const id = params.id.toString();
-     const response = await fetch(`http://localhost:5000/record/${params.id.toString()}`);
+     const idx = params.id ? params.id.toString() : 0;
+     const response = await fetch(`http://localhost:5000/record/${idx.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -24,7 +24,7 @@ export default function Edit() {
  
      const record = await response.json();
      if (!record) {
-       window.alert(`Record with id ${id} not found`);
+       window.alert(`Record with id ${idx} not found`);
        navigate("/");
        return;
      }

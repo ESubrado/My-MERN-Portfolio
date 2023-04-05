@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 
 const useScript = (url) => {
   useEffect(() => {
-    const element = document.querySelector('body')
-    const script = document.createElement('script')
-    script.src = url
-    script.async = true
-    script.type = 'text/javascript'
-    element.appendChild(script)
+    const element = document.querySelector('body');
+    const script = document.createElement('script');
+    script.src = url;
+    script.async = true;
+    script.type = 'text/javascript';
+    element && element.appendChild(script);
     return () => {
-      element.removeChild(script)
+      element && element.removeChild(script);
     }
   }, [url])
 };

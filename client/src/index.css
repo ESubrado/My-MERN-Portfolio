@@ -14,6 +14,23 @@
     }
 }
 
+:root {
+    --primary: #6244C5;
+    --secondary: #FFC448;
+    --light: #FAFAFB;
+    --dark: #12141D;
+}
+
+.border-black-600 {
+    --tw-border-opacity: 1;
+    border-color: blue;
+}
+
+.border-orange-600 {
+    --tw-border-opacity: 1;
+    border-color: #e43a19;
+}
+
 .content-div {
     background-repeat: no-repeat;
     background-size: cover;
