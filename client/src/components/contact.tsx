@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Contact(){
     return (
         <div name='contact' className='w-full h-screen bg-light flex justify-center items-center p-4'>

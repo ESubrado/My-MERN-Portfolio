@@ -1,8 +1,8 @@
-import React from "react";
- 
-// We use Route in order to define the different routes of our application
-import { Route, Routes } from "react-router-dom";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
+import { Route, Routes } from 'react-router-dom';
 // We import all the components we need in our app
 import Navbar from "./components/navbar";
 //import RecordList from "./components/recordList";
@@ -17,7 +17,7 @@ import Work from "./components/work";
 import useScript from "./components/hooks";
 
 
-function App() {  
+function App() {
   return (
     <>
       <Navbar />
@@ -34,6 +34,6 @@ function App() {
       </Routes>   
     </>    
   );
-};
- 
+}
+
 export default App;

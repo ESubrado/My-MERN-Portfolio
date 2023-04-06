@@ -35,7 +35,7 @@ function Home(){
             <p className='text-[#000] py-4 max-w-[700px]'>
             I'm a web developer specializing in building (and occasionally
             designing) exceptional digital experiences. Currently, I'm focused on
-            building responsive web applications.
+            building responsive web applications. 
             </p>
             <div>
             <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>

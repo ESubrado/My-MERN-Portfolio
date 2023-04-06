@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from "../data/data.js";
+import { data } from "../assets/data/data";
 
 
 const Work = () => {
@@ -22,7 +22,7 @@ const Work = () => {
 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           
           {/* Gird Item */}
-          {project.map((item, index) => (
+          {project.map((item : any, index : any) => (
   <div
     key={index}
     style={{ backgroundImage: `url(${item.image})` }}

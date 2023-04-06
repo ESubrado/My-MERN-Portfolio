@@ -1,18 +1,18 @@
 import React from 'react';
 
-import HTML from '../assets/html.png';
-import CSS from '../assets/css.png';
-import JavaScript from '../assets/javascript.png';
-import ReactImg from '../assets/react.png';
-import Node from '../assets/node.png';
-import FireBase from '../assets/firebase.png';
-import GitHub from '../assets/github.png';
-import Tailwind from '../assets/tailwind.png';
-import Mongo from '../assets/mongo.png';
+import HTML from '../assets/images/html.png';
+import CSS from '../assets/images/css.png';
+import JavaScript from '../assets/images/javascript.png';
+import ReactImg from '../assets/images/react.png';
+import Node from '../assets/images/node.png';
+import FireBase from '../assets/images/firebase.png';
+import GitHub from '../assets/images/github.png';
+import Tailwind from '../assets/images/tailwind.png';
+import Mongo from '../assets/images/mongo.png';
 
 const Skills = () => {
   return (
-    <div data-name='skills' className='w-full h-screen bg-light text-black-300'>
+    <div name='skills' className='w-full h-screen bg-light text-black-300'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div>

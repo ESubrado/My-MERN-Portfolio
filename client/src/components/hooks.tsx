@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useScript = (url) => {
+const useScript = (url:any) => {
   useEffect(() => {
     const element = document.querySelector('body');
     const script = document.createElement('script');
