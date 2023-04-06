@@ -1,76 +1,51 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
  
-export default function Edit() {
+export default function Create() {
  const [form, setForm] = useState({
    name: "",
    position: "",
    level: "",
-   records: [],
  });
- const params = useParams();
  const navigate = useNavigate();
  
- useEffect(() => {
-   async function fetchData() {
-     const id = params.id.toString();
-     const response = await fetch(`http://localhost:5000/record/${params.id.toString()}`);
- 
-     if (!response.ok) {
-       const message = `An error has occurred: ${response.statusText}`;
-       window.alert(message);
-       return;
-     }
- 
-     const record = await response.json();
-     if (!record) {
-       window.alert(`Record with id ${id} not found`);
-       navigate("/");
-       return;
-     }
- 
-     setForm(record);
-   }
- 
-   fetchData();
- 
-   return;
- }, [params.id, navigate]);
- 
  // These methods will update the state properties.
- function updateForm(value) {
+ function updateForm(value: any) {
    return setForm((prev) => {
      return { ...prev, ...value };
    });
  }
  
- async function onSubmit(e) {
+ // This function will handle the submission.
+ async function onSubmit(e:any) {
    e.preventDefault();
-   const editedPerson = {
-     name: form.name,
-     position: form.position,
-     level: form.level,
-   };
  
-   // This will send a post request to update the data in the database.
-   await fetch(`http://localhost:5000/update/${params.id}`, {
+   // When a post request is sent to the create url, we'll add a new record to the database.
+   const newPerson = { ...form };
+ 
+   await fetch("http://localhost:5000/record/add", {
      method: "POST",
-     body: JSON.stringify(editedPerson),
      headers: {
-       'Content-Type': 'application/json'
+       "Content-Type": "application/json",
      },
+     body: JSON.stringify(newPerson),
+   })
+   .catch(error => {
+     window.alert(error);
+     return;
    });
  
-   navigate("/");
+   setForm({ name: "", position: "", level: "" });
+   navigate("/mern");
  }
  
- // This following section will display the form that takes input from the user to update the data.
+ // This following section will display the form that takes the input from the user.
  return (
    <div>
-     <h3>Update Record</h3>
+     <h3>Create New Record</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
-         <label htmlFor="name">Name: </label>
+         <label htmlFor="name">Name</label>
          <input
            type="text"
            className="form-control"
@@ -80,7 +55,7 @@ export default function Edit() {
          />
        </div>
        <div className="form-group">
-         <label htmlFor="position">Position: </label>
+         <label htmlFor="position">Position</label>
          <input
            type="text"
            className="form-control"
@@ -125,14 +100,12 @@ export default function Edit() {
              onChange={(e) => updateForm({ level: e.target.value })}
            />
            <label htmlFor="positionSenior" className="form-check-label">Senior</label>
+         </div>
        </div>
-       </div>
-       <br />
- 
        <div className="form-group">
          <input
            type="submit"
-           value="Update Record"
+           value="Create person"
            className="btn btn-primary"
          />
        </div>
