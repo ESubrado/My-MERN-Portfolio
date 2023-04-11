@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
+import {Link, useLocation } from 'react-router-dom'
+import {Nav,NavItem, } from 'react-bootstrap';
 import {
   FaBars,
   FaTimes,
@@ -11,113 +13,51 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 //import Logo from '../assets/logo.png';
 //import { Link } from 'react-scroll'; // for SPA
+
+function Navbar (){  
+    const location : any = useLocation(); // once ready it returns the 'window.location' object
+    const [url, setUrl] = useState(null);
+    useEffect(() => {
+      setUrl(location.pathname);
+    }, [location]);
  
-// We import bootstrap to make our application look better.
-import "bootstrap/dist/css/bootstrap.css";
- 
-// We import NavLink to utilize the react router.
-import { NavLink } from "react-router-dom";
+    return (
+        <Nav className='navbar navbar-expand-lg d-flex justify-content-around bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5'>
+        <div className='py-4 py-lg-0' id="navbarCollapse">
+          <div className='navbar-nav ms-auto py-0'>
+            <NavItem><Link to="/" className={"nav-link" + (url === "/" ?" active-red" : "")}>Home</Link></NavItem>
+            <NavItem><Link to="/about" className={"nav-link" + (url === "/about" ?" active-red" : "")}>About</Link></NavItem>
+            <NavItem><Link to="/skills" className={"nav-link" + (url === "/skills" ?" active-red" : "")}>Skills</Link></NavItem>
+            <NavItem><Link to="/work" className={"nav-link" + (url === "/work" ?" active-red" : "")}>Work</Link></NavItem>
+            <NavItem><Link to="/contact" className={"nav-link" + (url === "/contact" ?" active-red" : "")}>Contact</Link></NavItem>        
+          </div>        
+        </div>   
+      </Nav>     
+    )
+  
+}
 
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
 
-  return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-light text-gray-300'>
-      <div>
-        {/* <img src={Logo} alt='Logo Image' style={{ width: '200px' }} /> */}
-      </div>
 
-      {/* menu */}
-      <ul className='hidden md:flex'>
-        <li>        
-          <a href='/'>Home</a>
-        </li>
-        <li>         
-          <a href='/about'>About</a>
-        </li>
-        <li>          
-           <a href='/skills'>Skills</a>
-        </li>
-        <li>         
-            <a href='/work'>Work</a>
-        </li>
-        <li>       
-            <a href='/contact'>Contact</a>
-        </li>
-      </ul>
+// const Navbar = () => {
+//   const [nav, setNav] = useState(false);
+//   const handleClick = () => setNav(!nav);
 
-      {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10'>
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
-
-      {/* Mobile menu */}
-      <ul
-        className={
-          !nav
-            ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
-        }
-      >
-        <li className='py-6 text-4xl'>       
-          <a href='/'>Home</a>
-        </li>
-        <li className='py-6 text-4xl'>        
-          <a href='/about'>About</a>
-        </li>
-        <li className='py-6 text-4xl'>         
-          <a href='/skills'>Skills</a>
-        </li>
-        <li className='py-6 text-4xl'>         
-          <a href='/work'>Work</a>
-        </li>
-        <li className='py-6 text-4xl'>        
-          <a href='/contact'>Contact</a>
-        </li>
-      </ul>
-
-      {/* Social icons */}
-      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
-        <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
-              Linkedin <FaLinkedin size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
-              Github <FaGithub size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
-              Email <HiOutlineMail size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='/'
-            >
-              Resume <BsFillPersonLinesFill size={30} />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+//   return (    
+//     <nav className='navbar navbar-expand-lg d-flex justify-content-around bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5'>
+//       <div className='py-4 py-lg-0' id="navbarCollapse">
+//         <div className='navbar-nav ms-auto py-0'>
+//           <a className="nav-item nav-link active" href='/'>Home</a>         
+//           <a className="nav-item nav-link" href='/about'>About</a> 
+//           <a className="nav-item nav-link" href='/skills'>Skills</a>               
+//           <a className="nav-item nav-link" href='/work'>Work</a>             
+//           <a className="nav-item nav-link" href='/contact'>Contact</a>
+//         </div>        
+//       </div>   
+//     </nav>     
+//   );
+// };
 
 export default Navbar;
 

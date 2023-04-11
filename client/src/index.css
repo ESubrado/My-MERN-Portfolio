@@ -60,3 +60,7 @@ code {
     )!important;
 }
 
+.active-red {
+    color: red !important;
+}
+

@@ -16,7 +16,6 @@ import Skills from "./components/skills";
 import Work from "./components/work";
 import useScript from "./components/hooks";
 
-
 function App() {
   return (
     <>
