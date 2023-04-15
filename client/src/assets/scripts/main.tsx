@@ -32,9 +32,9 @@ window.Typed = Typed;
     // Navbar on scrolling
     $(window).scroll(function () {
         if ($(this).scrollTop()! > 300) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
+          //  $('.navbar').fadeIn('slow').css('display', 'flex');
         } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
+         //   $('.navbar').fadeOut('slow').css('display', 'none');
         }
     });
 
