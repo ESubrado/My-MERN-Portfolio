@@ -68,3 +68,14 @@ code {
     color: red !important;
 }
 
+body{
+    margin-bottom: 60px; /* footer height */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+}
+
+

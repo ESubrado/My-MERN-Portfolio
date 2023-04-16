@@ -26,19 +26,19 @@ function Navbar (){
     }, [location]);
  
     return (
-        <Nav className='navbar navbar-expand-lg bg-white navbar-light d-flex justify-content-center shadow py-lg px-4 mx-auto px-lg-5 wow'>
-        <div className='navbar-collapse py-4 py-lg-0 d-flex' id="navbarCollapse">
-          {/* <div className='navbar-nav py-0 ms-auto'>            
-            <NavItem><Link to="/mern" className={"nav-link" + (url === "/about" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Link></NavItem>          
-          </div>   
-          <div className='navbar-brand py-3 px-4 d-none d-lg-block mx-3'></div> */}
-          <div className='navbar-nav py-0 mx-auto'>
+        <Nav className='navbar navbar-expand-lg bg-white navbar-light justify-content-around shadow py-lg px-4 mx-auto px-lg-5 wow'>
+        <div className='navbar-collapse py-4 py-lg-0 d-flex' id="navbarCollapse">     
+          <div className='navbar-nav py-0 me-auto'>            
+            <NavItem><Link to="/mern" className={"nav-link" + (url === "/mern" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Link></NavItem>          
+          </div>      
+          <div className='navbar-nav py-0'>            
             <NavItem><Link to="/" className={"nav-link" + (url === "/" ?" active" : "")}><FontAwesomeIcon icon={faHouse}/> Home</Link></NavItem>
             <NavItem><Link to="/about" className={"nav-link" + (url === "/about" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> About</Link></NavItem>
             <NavItem><Link to="/skills" className={"nav-link" + (url === "/skills" ?" active" : "")}><FontAwesomeIcon icon={faLaptopCode} /> Skills</Link></NavItem>
-            <NavItem><Link to="/work" className={"nav-link" + (url === "/work" ?" active" : "")}><FontAwesomeIcon icon={faLaptopFile} /> Work</Link></NavItem>
+            <NavItem><Link to="/projects" className={"nav-link" + (url === "/projects" ?" active" : "")}><FontAwesomeIcon icon={faLaptopFile} /> Projects</Link></NavItem>
             <NavItem><Link to="/contact" className={"nav-link" + (url === "/contact" ?" active" : "")}><FontAwesomeIcon icon={faPhoneVolume} /> Contact</Link></NavItem>        
-          </div>    
+          </div>   
+          
         </div>   
       </Nav>     
     )

@@ -25,7 +25,7 @@ function Home(){
 
     return (
         <div name='home' id="home" className='w-full h-screen container-fluid bg-light mt-0'>       
-            <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full bg-light'>
+            <div className='container px-8 flex justify-center h-full'>
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-6 py-6 pb-0 pt-lg-0">
                         <p className='font-bold mb-3 text-[#000]'>Hi, I'm</p>
