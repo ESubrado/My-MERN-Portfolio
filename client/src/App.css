@@ -218,6 +218,9 @@
   margin-right: -30px;
 }
 
+.remove-scroll{
+  overflow: hidden !important;
+}
 
 /*** Skills ***/
 #skill .progress {
