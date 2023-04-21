@@ -35,6 +35,10 @@ code {
     --dark: #12141D;
 }
 
+.h-screen {
+    height: 90vh;
+}
+
 .border-black-600 {
     --tw-border-opacity: 1;
     border-color: blue;
@@ -59,4 +63,19 @@ code {
         hsla(242, 74%, 61%, 0.8)   
     )!important;
 }
+
+.active-red {
+    color: red !important;
+}
+
+body{
+    margin-bottom: 60px; /* footer height */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+}
+
 

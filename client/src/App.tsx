@@ -13,9 +13,9 @@ import AboutMe from "./components/about";
 import Mern from "./components/mern";
 import Contact from "./components/contact";
 import Skills from "./components/skills";
-import Work from "./components/work";
+import Projects from "./components/projects";
 import useScript from "./components/hooks";
-
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -30,8 +30,9 @@ function App() {
         <Route path="/mern" element={<Mern/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/skills" element={<Skills/>}/>
-        <Route path="/work" element={<Work/>}/>        
-      </Routes>   
+        <Route path="/projects" element={<Projects/>}/>        
+      </Routes> 
+      {/* <Footer/>   */}
     </>    
   );
 }
