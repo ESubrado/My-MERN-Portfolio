@@ -106,7 +106,15 @@
 /*** Header ***/
 #home {
   /* margin-bottom: 6rem; */
-  background: url(./assets/images/bg-header-bl.png) left top no-repeat;
+  background: url(./assets/images/bg-header-bl.png) left top no-repeat, url(./assets/images/splashYellowbl3.png) right bottom no-repeat;
+  background-size: 30em, 70em;
+}
+
+@media only screen and (max-width: 800px){
+    #home {
+      background: url(./assets/images/bg-header-bl.png) left top no-repeat;
+      background-size: 30em;
+    }
 }
 
 .typed-cursor {

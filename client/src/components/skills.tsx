@@ -1,9 +1,16 @@
 import React from 'react';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 import { AnimationOnScroll } from "react-animation-on-scroll"
+import ProgressBar from "@ramonak/react-progress-bar";
 
 import 'animate.css/animate.css'
 
 const Skills = () => {
+
+   
+
+
   return (
     <div name='skills' id="skill" className='w-full h-screen bg-light container-fluid mt-0 text-black-300'>
         <div className="container px-8 flex justify-center h-full">
@@ -19,28 +26,22 @@ const Skills = () => {
                                     <div className="d-flex justify-content-between">
                                         <h6 className="font-weight-bold">HTML</h6>
                                         <h6 className="font-weight-bold">95%</h6>
-                                    </div>
-                                    <div className="progress">
-                                        {/* <div className="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div> */}
-                                    </div>
+                                    </div>                                   
+                                    <ProgressBar height={"10px"} animateOnRender={true} completed={95} maxCompleted={100} isLabelVisible={false}/>                                  
                                 </div>
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
                                         <h6 className="font-weight-bold">CSS</h6>
                                         <h6 className="font-weight-bold">85%</h6>
-                                    </div>
-                                    <div className="progress">
-                                        {/* <div className="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div> */}
-                                    </div>
+                                    </div>                                   
+                                    <ProgressBar height={"10px"} bgColor='#ffc107'  animateOnRender={true} completed={85} maxCompleted={100} isLabelVisible={false}/>                                     
                                 </div>
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
                                         <h6 className="font-weight-bold">PHP</h6>
                                         <h6 className="font-weight-bold">90%</h6>
-                                    </div>
-                                    <div className="progress">
-                                        {/* <div className="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div> */}
-                                    </div>
+                                    </div>                                   
+                                    <ProgressBar height={"10px"} bgColor='#dc3545' animateOnRender={true} completed={90} maxCompleted={100} isLabelVisible={false}/>                                     
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -48,28 +49,22 @@ const Skills = () => {
                                     <div className="d-flex justify-content-between">
                                         <h6 className="font-weight-bold">Javascript</h6>
                                         <h6 className="font-weight-bold">90%</h6>
-                                    </div>
-                                    <div className="progress">
-                                        {/* <div className="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div> */}
-                                    </div>
+                                    </div>                                   
+                                    <ProgressBar height={"10px"} bgColor='#198754' animateOnRender={true} completed={90} maxCompleted={100} isLabelVisible={false}/>                                     
                                 </div>
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
                                         <h6 className="font-weight-bold">Angular JS</h6>
                                         <h6 className="font-weight-bold">95%</h6>
-                                    </div>
-                                    <div className="progress">
-                                        {/* <div className="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div> */}
-                                    </div>
+                                    </div>                                   
+                                    <ProgressBar height={"10px"} bgColor='#000' animateOnRender={true} completed={95} maxCompleted={100} isLabelVisible={false}/>
                                 </div>
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
                                         <h6 className="font-weight-bold">Wordpress</h6>
                                         <h6 className="font-weight-bold">85%</h6>
-                                    </div>
-                                    <div className="progress">
-                                        {/* <div className="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div> */}
-                                    </div>
+                                    </div>                                   
+                                    <ProgressBar height={"10px"} bgColor='#0dcaf0' animateOnRender={true} completed={85} maxCompleted={100} isLabelVisible={false}/>                                     
                                 </div>
                             </div>
                         </div>
@@ -77,17 +72,9 @@ const Skills = () => {
                 </div>
 
                 <div className="col-lg-6 remove-scroll" data-wow-delay="0.5s">
-                    <AnimationOnScroll animateIn="animate__fadeInUp" duration={3} >  
-                        <ul className="nav nav-pills rounded border border-2 border-primary mb-5">
-                            <li className="nav-item w-50">
-                                {/* <button className="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button> */}
-                            </li>
-                            <li className="nav-item w-50">
-                                {/* <button className="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button> */}
-                            </li>
-                        </ul>
-                        <div className="tab-content">
-                            <div id="tab-1" className="tab-pane fade show p-0 active">
+                    <AnimationOnScroll animateIn="animate__fadeInUp" duration={3} className='ml-3' >
+                        <Tabs defaultActiveKey="firstSk" id="justify-tab-example" className='mb-3 rounded border border-2 fs-5' justify variant='pills' fill >
+                            <Tab eventKey="firstSk" title="Experience">
                                 <div className="row gy-5 gx-4">
                                     <div className="col-sm-6">
                                         <h5>UI Designer</h5>
@@ -114,8 +101,8 @@ const Skills = () => {
                                         <h6 className="mb-0">Apex Software Inc</h6>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="tab-2" className="tab-pane fade show p-0">
+                            </Tab>
+                            <Tab eventKey="secondSK" title="Education">
                                 <div className="row gy-5 gx-4">
                                     <div className="col-sm-6">
                                         <h5>UI Design Course</h5>
@@ -142,8 +129,8 @@ const Skills = () => {
                                         <h6 className="mb-0">Cambridge University</h6>
                                     </div>
                                 </div>
-                            </div>
-                        </div>                    
+                            </Tab>                       
+                        </Tabs>
                     </AnimationOnScroll>                   
                 </div>
 

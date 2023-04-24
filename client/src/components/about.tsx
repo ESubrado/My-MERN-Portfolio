@@ -1,8 +1,9 @@
 import React, {useEffect} from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll"
+import CountUp from 'react-countup';
 
-import 'animate.css/animate.css'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 
 import about1 from "../assets/images/about-1.jpg";
 import about2 from "../assets/images/about-2.jpg";
@@ -17,15 +18,15 @@ function AboutMe(){
                     <AnimationOnScroll animateIn="animate__fadeInUp" duration={1} >                 
                         <div className="d-flex align-items-center mb-5">
                             <div className="years flex-shrink-0 text-center me-4">
-                                <h1 className="display-1 mb-0">15</h1>
+                                <h1 className="display-1 mb-0"><CountUp end={7} delay={1} className="text-black-300" /></h1>
                                 <h5 className="mb-0">Years</h5>
                             </div>
                             <h3 className="lh-base mb-0">of working experience as a web designer & developer</h3>
                         </div>
                         <p className="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                        <p className="mb-3"><i className="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
-                        <p className="mb-3"><i className="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
-                        <p className="mb-3"><i className="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
+                        <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> Afordable Prices</p>
+                        <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> High Quality Product</p>
+                        <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> On Time Project Delivery</p>
                         <a className="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>                    
                     </AnimationOnScroll>   
                 </div>
@@ -41,14 +42,14 @@ function AboutMe(){
                         </div>
                         <div className="d-flex align-items-center mb-3">
                             <h5 className="border-end pe-3 me-3 mb-0">Happy Clients</h5>
-                            <h2 className="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                            <h2 className="text-primary fw-bold mb-0"><CountUp end={10000} delay={1} /> +</h2>
                         </div>
-                        <p className="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                        <p className="mb-4">Estimated number of clients who are covered with the projects (both new and revamped) in which I am the main contributor. This is a team effort.</p>
                         <div className="d-flex align-items-center mb-3">
-                            <h5 className="border-end pe-3 me-3 mb-0">Projects Completed</h5>
-                            <h2 className="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                            <h5 className="border-end pe-3 me-3 mb-0">Projects Completed (Enterprise)</h5>
+                            <h2 className="text-primary fw-bold mb-0"><CountUp end={5} delay={1.5} /></h2>
                         </div>
-                        <p className="mb-0">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>                      
+                        <p className="mb-0">Projects made ranging from awarding app, meeting invitation scheduler, pharmaceutical compliance automation and document generation.</p>                      
                     </AnimationOnScroll>
                 </div> 
             </div>

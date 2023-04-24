@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import Isotope from "isotope-layout";
-import { data } from "../assets/data/data";
+//import { data } from "../assets/data/data";
 
 import $ from "jquery";
 import { AnimationOnScroll } from "react-animation-on-scroll"
@@ -12,7 +12,6 @@ import proj2 from '../assets/images/project-2.jpg';
 import proj3 from '../assets/images/project-3.jpg';
 import proj4 from '../assets/images/project-4.jpg';
 import proj5 from '../assets/images/project-5.jpg';
-import proj6 from '../assets/images/project-6.jpg';
 
 
 const Projects = () => {
@@ -57,21 +56,22 @@ const Projects = () => {
   return (
         <>
         <div name='project' id='project' className=' bg-light container-xxl mt-0 text-black-300 mt-5 '>
-            <div className='container'> 
+            <div className='container remove-scroll'> 
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={1} className="row g-5 mb-5 align-items-center" >
-                    <div className="col-lg-6">
+                    <div className="col-lg-4">
                         <h1 className="display-5 mb-0">My Projects</h1>
                     </div>
-                    <div className="col-lg-6 text-lg-end">
+                    <div className="col-lg-8 text-lg-end">
                         <ul className="list-inline mx-n3 mb-0" id="portfolio-flters">
                             <li className="mx-3 active" onClick={handleFilterKeyChange("*")} data-filter="*">All Projects</li>
-                            <li className="mx-3" onClick={handleFilterKeyChange("first")} data-filter=".first">UI/UX Design</li>
-                            <li className="mx-3" onClick={handleFilterKeyChange("second")} data-filter=".second">Graphic Design</li>
+                            <li className="mx-3" onClick={handleFilterKeyChange("first")} data-filter=".first">Sharepoint Related</li>
+                            <li className="mx-3" onClick={handleFilterKeyChange("second")} data-filter=".second">Application</li>
+                            <li className="mx-3" onClick={handleFilterKeyChange("third")} data-filter=".third">Self Project</li>
                         </ul>
                     </div>
                 </AnimationOnScroll>         
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={2} className='row g-4 portfolio-container'>  
-                    <div className="col-lg-4 col-md-6 portfolio-item first">
+                    <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj1} alt=""/>
                             <div className="portfolio-btn">
@@ -80,7 +80,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 portfolio-item second">
+                    <div className="col-lg-3 col-md-5 portfolio-item second">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj2} alt=""/>
                             <div className="portfolio-btn">
@@ -89,7 +89,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 portfolio-item first">
+                    <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj3} alt=""/>
                             <div className="portfolio-btn">
@@ -98,7 +98,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 portfolio-item second">
+                    <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj4} alt=""/>
                             <div className="portfolio-btn">
@@ -107,7 +107,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 portfolio-item first">
+                    <div className="col-lg-3 col-md-5 portfolio-item third">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj5} alt=""/>
                             <div className="portfolio-btn">
@@ -115,16 +115,7 @@ const Projects = () => {
                                 <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj5}><i className="fa fa-link"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 portfolio-item second">
-                        <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid" src={proj6} alt=""/>
-                            <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj6} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj6}><i className="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>                                    
+                    </div>                                                  
                 </AnimationOnScroll>
             </div>
       </div>

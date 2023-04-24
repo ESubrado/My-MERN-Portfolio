@@ -8,8 +8,7 @@
     body {
         @apply font-[Raleway];
     }
-    li {
-        @apply px-4;
+    li {      
         @apply cursor-pointer
     }
 }
@@ -27,6 +26,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+.collapse {
+    visibility: initial;
+}
 
 :root {
     --primary: #6244C5;

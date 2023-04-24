@@ -1,24 +1,27 @@
 import React, {useEffect, useState } from 'react';
-import {Link, useLocation } from 'react-router-dom'
-import {Nav,NavItem, } from 'react-bootstrap';
+import {Link, useLocation, NavLink } from 'react-router-dom'
+import {NavItem} from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faCircleUser, faLaptopCode, faLaptopFile, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 
-import {
-  FaBars,
-  FaTimes,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaLinkedinIn,
-} from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+// import {
+//   FaBars,
+//   FaTimes,
+//   FaGithub,
+//   FaLinkedin,
+//   FaFacebook,
+//   FaLinkedinIn,
+// } from 'react-icons/fa';
+// import { HiOutlineMail } from 'react-icons/hi';
+// import { BsFillPersonLinesFill } from 'react-icons/bs';
 //import Logo from '../assets/logo.png';
 //import { Link } from 'react-scroll'; // for SPA
 
-function Navbar (){  
+function Navbarr (){  
     const location : any = useLocation(); // once ready it returns the 'window.location' object
     const [url, setUrl] = useState(null);
     useEffect(() => {
@@ -26,27 +29,31 @@ function Navbar (){
     }, [location]);
  
     return (
-        <Nav className='navbar navbar-expand-lg bg-white navbar-light justify-content-around shadow py-lg px-4 mx-auto px-lg-5 wow'>
-        <div className='navbar-collapse py-4 py-lg-0 d-flex' id="navbarCollapse">     
-          <div className='navbar-nav py-0 me-auto'>            
-            <NavItem><Link to="/mern" className={"nav-link" + (url === "/mern" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Link></NavItem>          
-          </div>      
-          <div className='navbar-nav py-0'>            
-            <NavItem><Link to="/" className={"nav-link" + (url === "/" ?" active" : "")}><FontAwesomeIcon icon={faHouse}/> Home</Link></NavItem>
-            <NavItem><Link to="/about" className={"nav-link" + (url === "/about" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> About</Link></NavItem>
-            <NavItem><Link to="/skills" className={"nav-link" + (url === "/skills" ?" active" : "")}><FontAwesomeIcon icon={faLaptopCode} /> Skills</Link></NavItem>
-            <NavItem><Link to="/projects" className={"nav-link" + (url === "/projects" ?" active" : "")}><FontAwesomeIcon icon={faLaptopFile} /> Projects</Link></NavItem>
-            <NavItem><Link to="/contact" className={"nav-link" + (url === "/contact" ?" active" : "")}><FontAwesomeIcon icon={faPhoneVolume} /> Contact</Link></NavItem>        
-          </div>   
-          
-        </div>   
-      </Nav>     
+      <>
+        <Navbar collapseOnSelect expand='xl' bg='light' variant='light'>
+          <Container fluid className='mx-4'>                  
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link as={NavLink} to="/mern" className={"nav-link" + (url === "/mern" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Nav.Link>                  
+              </Nav>
+              <Nav>
+                <Nav.Link as={NavLink} to="/" className={"nav-link" + (url === "/" ?" active" : "")}><FontAwesomeIcon icon={faHouse}/> Home</Nav.Link>
+                <Nav.Link as={NavLink} to="/about" className={"nav-link" + (url === "/about" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> About</Nav.Link>
+                <Nav.Link as={NavLink} to="/skills" className={"nav-link" + (url === "/skills" ?" active" : "")}><FontAwesomeIcon icon={faLaptopCode} /> Skills</Nav.Link>
+                <Nav.Link as={NavLink} to="/projects" className={"nav-link" + (url === "/projects" ?" active" : "")}><FontAwesomeIcon icon={faLaptopFile} /> Projects</Nav.Link>
+                <Nav.Link as={NavLink} to="/contact" className={"nav-link" + (url === "/contact" ?" active" : "")}><FontAwesomeIcon icon={faPhoneVolume} /> Contact</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar> 
+      </>
     )
   
 }
 
 
-export default Navbar;
+export default Navbarr;
 
 
 // Here, we display our Navbar

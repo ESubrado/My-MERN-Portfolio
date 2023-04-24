@@ -13,7 +13,7 @@ function Contact(){
                             <h1 className="display-5 mb-0">Let's Work Together</h1>
                         </div>
                         <div className="col-lg-6 text-lg-end">
-                            <a className="btn btn-primary py-3 px-5" href="">Say Hello</a>
+                            <a className="btn btn-primary py-3 px-5" href="#">Say Hello</a>
                         </div>
                     </AnimationOnScroll>
                 </div>
@@ -32,10 +32,10 @@ function Contact(){
                             <hr className="w-100"/>
                             <p className="mb-2">Follow me:</p>
                             <div className="d-flex pt-2">
-                                <a className="btn btn-square btn-primary me-2" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-square btn-primary me-2" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-square btn-primary me-2" href=""><i className="fab fa-youtube"></i></a>
-                                <a className="btn btn-square btn-primary me-2" href=""><i className="fab fa-linkedin-in"></i></a>
+                                <a className="btn btn-square btn-primary me-2" href="#"><i className="fab fa-twitter"></i></a>
+                                <a className="btn btn-square btn-primary me-2" href="#"><i className="fab fa-facebook-f"></i></a>
+                                <a className="btn btn-square btn-primary me-2" href="#"><i className="fab fa-youtube"></i></a>
+                                <a className="btn btn-square btn-primary me-2" href="#"><i className="fab fa-linkedin-in"></i></a>
                             </div>
                         </AnimationOnScroll>                       
                     </div>
