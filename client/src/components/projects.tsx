@@ -1,9 +1,13 @@
 import React, {useEffect, useState, useRef} from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Isotope from "isotope-layout";
 //import { data } from "../assets/data/data";
 
 import $ from "jquery";
-import { AnimationOnScroll } from "react-animation-on-scroll"
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faLink } from '@fortawesome/free-solid-svg-icons'
 
 import 'animate.css/animate.css'
 
@@ -75,8 +79,8 @@ const Projects = () => {
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj1} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj1} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj1}><i className="fa fa-link"></i></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj1} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -84,8 +88,8 @@ const Projects = () => {
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj2} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj2} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj2}><i className="fa fa-link"></i></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj2} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -93,8 +97,8 @@ const Projects = () => {
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj3} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj3} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj3}><i className="fa fa-link"></i></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj3} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -102,8 +106,8 @@ const Projects = () => {
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj4} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj4} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj4}><i className="fa fa-link"></i></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj4} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -111,8 +115,8 @@ const Projects = () => {
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj5} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj5} data-lightbox="portfolio"><i className="fa fa-eye"></i></a>
-                                <a className="btn btn-lg-square btn-outline-secondary border-2 mx-1" href={proj5}><i className="fa fa-link"></i></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj5} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>                                                  

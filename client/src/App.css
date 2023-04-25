@@ -442,3 +442,14 @@
 .testimonial-carousel .owl-dot.active::after {
   background: var(--primary);
 }
+
+.btn-outline2-secondary {
+  color: #FFF !important;
+  border-color: #FFF !important;
+}
+
+.btn-outline2-secondary:hover {
+  color: #000 !important;
+  background-color: #FFF !important;
+  border-color: #FFF !important;
+}

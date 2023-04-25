@@ -6,9 +6,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 
 import 'animate.css/animate.css'
 
-const Skills = () => {
-
-   
+const Skills = () => {  
 
 
   return (

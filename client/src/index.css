@@ -42,6 +42,10 @@ code {
     height: 90vh;
 }
 
+.h-screen-proj {
+    height: 85vh
+}
+
 .border-black-600 {
     --tw-border-opacity: 1;
     border-color: blue;
