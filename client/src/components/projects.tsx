@@ -75,7 +75,7 @@ const Projects = () => {
                     </div>
                 </AnimationOnScroll>         
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={2} className='row g-4 portfolio-container'>  
-                    <div className="col-lg-3 col-md-5 portfolio-item first">
+                    <div className="col-lg-3 col-md-5 portfolio-item second">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj1} alt=""/>
                             <div className="portfolio-btn">
@@ -84,12 +84,12 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-5 portfolio-item second">
+                    <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj2} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj2} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/sharepoint"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ const Projects = () => {
                             <img className="img-fluid" src={proj3} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj3} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/sms"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ const Projects = () => {
                             <img className="img-fluid" src={proj4} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj4} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/dils"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ const Projects = () => {
                             <img className="img-fluid" src={proj5} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj5} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/mernx"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>                                                  

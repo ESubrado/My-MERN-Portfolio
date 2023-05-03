@@ -453,3 +453,31 @@
   background-color: #FFF !important;
   border-color: #FFF !important;
 }
+
+.home-about-left img {
+  width: 100%; }
+
+@media (max-width: 991px) {
+    .home-about-left img {
+      display: none; } 
+}
+
+.home-about-right h1 {
+  padding: 20px 0; 
+}
+
+@media (max-width: 413px) {
+  .home-about-right h1 {
+    font-size: 30px; }
+  .home-about-right h1 br {
+    display: none; } 
+}
+
+.home-about-right p {
+  margin-bottom: 40px; 
+}
+
+@media (max-width: 991px) {
+  .home-about-right2 {
+    margin-top: 50px; } 
+}
