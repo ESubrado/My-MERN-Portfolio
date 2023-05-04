@@ -4,6 +4,7 @@ import {NavItem} from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Badge from 'react-bootstrap/Badge';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faCircleUser, faLaptopCode, faLaptopFile, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
@@ -35,7 +36,8 @@ function Navbarr (){
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link as={NavLink} to="/mern" className={"nav-link" + (url === "/mern" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Nav.Link>                  
+                <Nav.Link as={NavLink} to="/projects_all/mern" className={"nav-link" + (url === "/projects_all/mern" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Nav.Link>                  
+                <div className='nav-link'><Badge bg='danger' text='light'>Onging site construction</Badge></div>
               </Nav>
               <Nav>
                 <Nav.Link as={NavLink} to="/" className={"nav-link" + (url === "/" ?" active" : "")}><FontAwesomeIcon icon={faHouse}/> Home</Nav.Link>

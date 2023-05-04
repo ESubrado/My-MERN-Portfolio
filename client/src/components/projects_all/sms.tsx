@@ -18,7 +18,7 @@ const SmsProj = () => {
 
     return (
         <>
-            <div name='SmsProj01' id="SmsProj01" className='bg-light mt-0 text-black-300'>
+            <div name='SmsProj01' id="SmsProj01" className='bg-light mt-0 text-black-300 it-bckrnd'>
                 <div className="row g-5 mx-3 px-1">
                     <div className="col-lg-12 text-left">
                         <button className="btn btn-secondary" onClick={() => navigate(-1)}>Back</button> 
@@ -31,8 +31,8 @@ const SmsProj = () => {
                                 <Col sm={2}>
                                 <Nav variant="pills" className="flex-column">
                                     <Nav.Item><Nav.Link eventKey="first">Summary</Nav.Link></Nav.Item>
-                                    <Nav.Item><Nav.Link eventKey="second">Revamped Event Scheduler</Nav.Link></Nav.Item>
-                                    <Nav.Item><Nav.Link eventKey="third">Employee Upskilling Feature</Nav.Link></Nav.Item>
+                                    <Nav.Item><Nav.Link eventKey="second">Event Scheduler</Nav.Link></Nav.Item>
+                                    <Nav.Item><Nav.Link eventKey="third">Employee Upskilling</Nav.Link></Nav.Item>
                                 </Nav>
                                 </Col>
                                 <Col sm={10}>
@@ -50,23 +50,26 @@ const SmsProj = () => {
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="second">
                                             <div className="w-full h-screen-proj container-fluid">
-                                                <div className="container px-8 flex justify-center h-full"> 
-                                                    <div className="row g-5 align-items-center"> 
-                                                        <div className="col-lg-5 home-about-left">
-                                                            <img className="img-fluid" src={imageOneSm} alt=""/>
-                                                        </div>
-                                                        <div className="offset-lg-1 col-lg-5 home-about-right">                                                            
-                                                            <p className="my-2">
+                                                <div className="container px-8 flex justify-center h-full">  
+                                                    <div className="row g-5 align-items-center">     
+                                                        <div className="col-lg-6 home-about-right home-about-right2 m-0"> 
+                                                            <div className="heading_container">
+                                                                <h2>Revamped Event Scheduler</h2>
+                                                            </div>                                                              
+                                                            <p className="py-0">
                                                                 This collaborative feature enables event managers to assign employees into an enchancement training
                                                                 based on a preferred catalog. These catalogs include some of best standards in pharmaceutical industry whose aim is to 
                                                                 increase productivity and ultimately on achieving its goal. (LEAN Manufacturing and Six Sigma).</p>  
 
-                                                            <p className="my-2"> 
+                                                            <p className="py-0"> 
                                                                 The revamp version uses MVVM architectural pattern for manageability and better in error debugging. We also upgraded the Kendo UI version 
                                                                 and used Bootstrap for layout. On Sharepoint backend support, instead of using javascript CSOM (Client Side Object Model) to get data, we are now
                                                                 employing the REST API.                               
-                                                            </p>                       
-                                                        </div>                                                        
+                                                            </p>                          
+                                                        </div>
+                                                        <div className="col-lg-5 home-about-left">
+                                                            <img className="img-fluid" src={imageOneSm} alt=""/>
+                                                        </div>  
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,20 +78,22 @@ const SmsProj = () => {
                                             <div className="w-full h-screen-proj container-fluid">
                                                 <div className="container px-8 flex justify-center h-full"> 
                                                     <div className="row g-5 align-items-center">     
-                                                        <div className="col-lg-6 home-about-right home-about-right2 m-0">                                                          
-                                                            <p className="my-2">
+                                                        <div className="col-lg-6 home-about-right home-about-right2 m-0"> 
+                                                            <div className="heading_container">
+                                                                <h2>Employee Upskilling Tool</h2>
+                                                            </div>                                                              
+                                                            <p className="py-0">
                                                                 Another collaborative feature in which users are able to keep track their trainings, achievement and other competency certificate
                                                                 which will then be used for employee appraisal or promotion.
                                                             </p>   
-                                                            <p className="my-2">
+                                                            <p className="py-0">
                                                                 It uses bootstrap for layout and kendo UI for grids and other components such as the dropdown option. There is also an administration page that only a user with special role have access in.
                                                                 This is made possible my creating a permission group with special privileges within the Sharepoint site.
                                                             </p>                        
                                                         </div>
                                                         <div className="col-lg-5 home-about-left">
                                                             <img className="img-fluid" src={imageTwoSm} alt=""/>
-                                                        </div>   
-                                                       
+                                                        </div>  
                                                     </div>
                                                 </div>
                                             </div>
