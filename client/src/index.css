@@ -8,8 +8,7 @@
     body {
         @apply font-[Raleway];
     }
-    li {
-        @apply px-4;
+    li {      
         @apply cursor-pointer
     }
 }
@@ -28,6 +27,10 @@ code {
     monospace;
 } */
 
+.collapse {
+    visibility: initial;
+}
+
 :root {
     --primary: #6244C5;
     --secondary: #FFC448;
@@ -37,6 +40,10 @@ code {
 
 .h-screen {
     height: 90vh;
+}
+
+.h-screen-proj {
+    height: 85vh
 }
 
 .border-black-600 {

@@ -1,11 +1,13 @@
 import React, {useEffect} from "react";
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { NavLink } from "react-router-dom";
-import profilePic from "../assets/images/profileMain.png";
+import profilePic from "../assets/images/ProfilePic2022.png";
 import { AnimationOnScroll } from "react-animation-on-scroll"
 
 import $ from "jquery";
 import Typed from "typed.js";
+
+window.jQuery = $;
 
 
 function Home(){
