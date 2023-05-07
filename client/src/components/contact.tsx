@@ -5,7 +5,7 @@ import 'animate.css/animate.css'
 
 function Contact(){
     return (
-        <div name='contact' id='contact' className='w-full h-screen bg-light container-fluid mt-0 text-black-300'>
+        <div name='contact' id='contact' className='w-full h-screen container-fluid mt-0 text-black-300'>
             <div className="container py-6 h-full">
                 <div className="remove-scroll">
                     <AnimationOnScroll animateIn="animate__fadeInUp" className="row g-5 mb-5 align-items-center" duration={1} >    

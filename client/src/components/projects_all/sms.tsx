@@ -1,7 +1,8 @@
 import React from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
-import $ from "jquery";
+// import $ from "jquery";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Col from 'react-bootstrap/Col';
@@ -18,37 +19,31 @@ const SmsProj = () => {
 
     return (
         <>
-            <div name='SmsProj01' id="SmsProj01" className='bg-light mt-0 text-black-300 it-bckrnd'>
+            <div name='SmsProj01' id="SmsProj01" className='remove-scroll mt-0 text-black-300 it-bckrnd'>
                 <div className="row g-5 mx-3 px-1">
                     <div className="col-lg-12 text-left">
-                        <button className="btn btn-secondary" onClick={() => navigate(-1)}>Back</button> 
+                        <Breadcrumb>
+                            <Breadcrumb.Item linkAs={Link} linkProps={{to: "/"}}>Home</Breadcrumb.Item>
+                            <Breadcrumb.Item linkAs={Link} linkProps={{to: "/projects"}}>Projects</Breadcrumb.Item>
+                            <Breadcrumb.Item active>Manufacturing Projects</Breadcrumb.Item>
+                        </Breadcrumb>
+                    {/* <button className="btn btn-secondary" onClick={() => navigate(-1)}>Back</button>                        */}
                     </div>
+                   
                 </div>    
-                <div className="row g-5 mx-0 px-3 pt-3">
+                <AnimationOnScroll animateIn="animate__fadeInUp" duration={1} className="row mx-3 px-3 pt-1">
                     <div className="col-lg-12">                      
                         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                             <Row>
                                 <Col sm={2}>
-                                <Nav variant="pills" className="flex-column">
-                                    <Nav.Item><Nav.Link eventKey="first">Summary</Nav.Link></Nav.Item>
-                                    <Nav.Item><Nav.Link eventKey="second">Event Scheduler</Nav.Link></Nav.Item>
-                                    <Nav.Item><Nav.Link eventKey="third">Employee Upskilling</Nav.Link></Nav.Item>
+                                <Nav variant="pills" className="flex-column">                                  
+                                    <Nav.Item><Nav.Link eventKey="first">Event Scheduler</Nav.Link></Nav.Item>
+                                    <Nav.Item><Nav.Link eventKey="second">Employee Upskilling</Nav.Link></Nav.Item>
                                 </Nav>
                                 </Col>
                                 <Col sm={10}>
                                     <Tab.Content>
                                         <Tab.Pane eventKey="first">
-                                            <div className="w-full h-screen-proj container-fluid">
-                                                <div className="container px-8 flex justify-center h-full"> 
-                                                    <div className="row g-5 align-items-center">           
-                                                        <div className="col-lg-12">
-                                                            <label>First</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Tab.Pane>
-                                        <Tab.Pane eventKey="second">
                                             <div className="w-full h-screen-proj container-fluid">
                                                 <div className="container px-8 flex justify-center h-full">  
                                                     <div className="row g-5 align-items-center">     
@@ -74,7 +69,7 @@ const SmsProj = () => {
                                                 </div>
                                             </div>
                                         </Tab.Pane>
-                                        <Tab.Pane eventKey="third">
+                                        <Tab.Pane eventKey="second">
                                             <div className="w-full h-screen-proj container-fluid">
                                                 <div className="container px-8 flex justify-center h-full"> 
                                                     <div className="row g-5 align-items-center">     
@@ -97,13 +92,13 @@ const SmsProj = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </Tab.Pane>
+                                        </Tab.Pane>                                        
                                     </Tab.Content>
                                 </Col>
                             </Row>
                         </Tab.Container>
                     </div>
-                </div> 
+                </AnimationOnScroll> 
             </div>  
         </>
    

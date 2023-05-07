@@ -50,7 +50,7 @@ const Projects = () => {
         setTimeout(function(){
             if (filterKey === "*") isotope.current?.arrange({ filter: `*` });            
             else isotope.current?.arrange({ filter: `.${filterKey}` }); 
-        }, 100);                   
+        }, 200);                   
     }, [filterKey]);
 
     const handleFilterKeyChange = (key: string) => () =>{ 
@@ -59,7 +59,7 @@ const Projects = () => {
   
   return (
         <>
-        <div name='project' id='project' className=' bg-light container-xxl mt-0 text-black-300 mt-5 '>
+        <div name='project' id='project' className='container-xxl mt-0 text-black-300 mt-5 '>
             <div className='container remove-scroll'> 
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={1} className="row g-5 mb-5 align-items-center" >
                     <div className="col-lg-4">
@@ -74,13 +74,22 @@ const Projects = () => {
                         </ul>
                     </div>
                 </AnimationOnScroll>         
-                <AnimationOnScroll animateIn="animate__fadeInUp" duration={2} className='row g-4 portfolio-container'>  
+                <AnimationOnScroll animateIn="animate__fadeInUp" duration={2} className='row g-4 portfolio-container'> 
+                    <div className="col-lg-3 col-md-5 portfolio-item first">
+                        <div className="portfolio-img rounded overflow-hidden">
+                            <img className="img-fluid" src={proj3} alt=""/>
+                            <div className="portfolio-btn">
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj3} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sms"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                            </div>
+                        </div>
+                    </div> 
                     <div className="col-lg-3 col-md-5 portfolio-item second">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj1} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj1} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -89,25 +98,16 @@ const Projects = () => {
                             <img className="img-fluid" src={proj2} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj2} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/sharepoint"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sharepoint"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-3 col-md-5 portfolio-item first">
-                        <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid" src={proj3} alt=""/>
-                            <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj3} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/sms"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                    
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj4} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj4} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/dils"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/dils"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ const Projects = () => {
                             <img className="img-fluid" src={proj5} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj5} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects/mernx"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/mernx"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>                                                  
