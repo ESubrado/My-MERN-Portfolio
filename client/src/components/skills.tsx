@@ -10,7 +10,7 @@ const Skills = () => {
 
 
   return (
-    <div name='skills' id="skill" className='w-full h-screen bg-light container-fluid mt-0 text-black-300'>
+    <div name='skills' id="skill" className='w-full h-screen container-fluid mt-0 text-black-300'>
         <div className="container px-8 flex justify-center h-full">
             <div className="row g-5 align-items-center">           
                 <div className="col-lg-6 remove-scroll">

@@ -27,7 +27,7 @@ function Home(){
     });   
 
     return (
-        <div name='home' id="home" className='w-full h-screen container-fluid bg-light mt-0'>       
+        <div name='home' id="home" className='w-full h-screen container-fluid mt-0'>       
             <div className='container px-8 flex justify-center h-full'>
                 <div className="row g-5 align-items-center remove-scroll">
                     <AnimationOnScroll animateIn="animate__fadeInUp" duration={1} className="col-lg-6 py-6 pb-0 pt-lg-0">
