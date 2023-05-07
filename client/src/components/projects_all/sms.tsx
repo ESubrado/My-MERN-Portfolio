@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate, Link} from "react-router-dom";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import PicModal from "../templates/picmodal";
 
 // import $ from "jquery";
 import { AnimationOnScroll } from "react-animation-on-scroll";
@@ -15,7 +16,8 @@ import imageOneSm from '../../assets/images/imageOneSm.jpg';
 import imageTwoSm from '../../assets/images/imageTwoSm.jpg';
 
 const SmsProj = () => {
-    let navigate = useNavigate();
+    //let navigate = useNavigate();
+    const [picModalShow, setPicModalShow] = React.useState({showModal: false, image: ''});    
 
     return (
         <>
@@ -46,7 +48,7 @@ const SmsProj = () => {
                                         <Tab.Pane eventKey="first">
                                             <div className="w-full h-screen-proj container-fluid">
                                                 <div className="container px-8 flex justify-center h-full">  
-                                                    <div className="row g-5 align-items-center">     
+                                                    <div className="row g-5 align-items-center pb-4">     
                                                         <div className="col-lg-6 home-about-right home-about-right2 m-0"> 
                                                             <div className="heading_container">
                                                                 <h2>Revamped Event Scheduler</h2>
@@ -63,7 +65,7 @@ const SmsProj = () => {
                                                             </p>                          
                                                         </div>
                                                         <div className="col-lg-5 home-about-left">
-                                                            <img className="img-fluid" src={imageOneSm} alt=""/>
+                                                            <img className="img-fluid modal-img" src={imageOneSm} alt="" onClick={() => setPicModalShow({showModal: true, image: 'imageOne.jpg'})}/>
                                                         </div>  
                                                     </div>
                                                 </div>
@@ -72,7 +74,7 @@ const SmsProj = () => {
                                         <Tab.Pane eventKey="second">
                                             <div className="w-full h-screen-proj container-fluid">
                                                 <div className="container px-8 flex justify-center h-full"> 
-                                                    <div className="row g-5 align-items-center">     
+                                                    <div className="row g-5 align-items-center pb-4">     
                                                         <div className="col-lg-6 home-about-right home-about-right2 m-0"> 
                                                             <div className="heading_container">
                                                                 <h2>Employee Upskilling Tool</h2>
@@ -87,7 +89,7 @@ const SmsProj = () => {
                                                             </p>                        
                                                         </div>
                                                         <div className="col-lg-5 home-about-left">
-                                                            <img className="img-fluid" src={imageTwoSm} alt=""/>
+                                                            <img className="img-fluid modal-img" src={imageTwoSm} alt="" onClick={() => setPicModalShow({showModal: true, image: 'imageTwo.jpg'})}/>
                                                         </div>  
                                                     </div>
                                                 </div>
@@ -99,7 +101,17 @@ const SmsProj = () => {
                         </Tab.Container>
                     </div>
                 </AnimationOnScroll> 
-            </div>  
+            </div> 
+
+            <PicModal
+                modalControls={{
+                    show: picModalShow.showModal,
+                    onHide: () => setPicModalShow({showModal:false, image: ''})
+                }}   
+                show={picModalShow.showModal}             
+                url={picModalShow.showModal ? picModalShow.image : ''}                
+                hello="yes"
+            />             
         </>
    
    ); 

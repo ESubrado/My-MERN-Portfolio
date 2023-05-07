@@ -502,3 +502,7 @@
   background: url(./assets/images/IT_phto.png) left bottom no-repeat;
   background-size: 50em;
 }
+
+.modal-img:hover{
+  cursor: pointer;
+}
