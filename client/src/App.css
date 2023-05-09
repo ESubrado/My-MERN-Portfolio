@@ -500,9 +500,37 @@
 .it-bckrnd {
   /* margin-bottom: 6rem; */
   background: url(./assets/images/IT_phto.png) left bottom no-repeat;
-  background-size: 50em;
+  background-size: auto;
 }
 
 .modal-img:hover{
   cursor: pointer;
+}
+
+.spLogoSize{
+  width: 90px !important;
+  display:inline-block;
+}
+
+.kendologoSize{
+  width: 110px !important;
+  display:inline-block;
+}
+
+.reactLogoSize{
+  width: 50px !important;
+  display:inline-block;
+}
+
+.btstrapLogoSize{
+  width: 50px !important;
+  display:inline-block;
+}
+
+.fontlogolabel{
+  font-size: 10pt !important; 
+}
+
+.notready{  
+  filter: grayscale(100%);  
 }

@@ -17,6 +17,7 @@ import Projects from "./components/projects";
 import AlphaProj from './components/projects_all/alpha';
 import AwardsProj from './components/projects_all/awards';
 import SmsProj from './components/projects_all/sms';
+import SmsProj2 from './components/projects_all/sms2';
 import DilsProj from './components/projects_all/dils';
 import MernProj from './components/projects_all/mernx';
 //import useScript from "./components/hooks";
@@ -39,6 +40,7 @@ function App() {
         <Route path="/projects_all/alpha" element={<AlphaProj/>}/>
         <Route path="/projects_all/sharepoint" element={<AwardsProj/>}/>        
         <Route path="/projects_all/sms" element={<SmsProj/>}/> 
+        <Route path="/projects_all/sms2" element={<SmsProj2/>}/> 
         <Route path="/projects_all/dils" element={<DilsProj/>}/>     
         <Route path="/projects_all/mernx" element={<MernProj/>}/>                
       </Routes> 
