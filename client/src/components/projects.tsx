@@ -16,6 +16,7 @@ import proj2 from '../assets/images/project-2.jpg';
 import proj3 from '../assets/images/project-3.jpg';
 import proj4 from '../assets/images/project-4.jpg';
 import proj5 from '../assets/images/project-5.jpg';
+import proj6 from '../assets/images/project-6.jpg';
 
 
 const Projects = () => {
@@ -75,6 +76,15 @@ const Projects = () => {
                     </div>
                 </AnimationOnScroll>         
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={2} className='row g-4 portfolio-container'> 
+                    <div className="col-lg-3 col-md-5 portfolio-item second">
+                        <div className="portfolio-img rounded overflow-hidden">
+                            <img className="img-fluid notready" src={proj6} alt=""/>
+                            <div className="portfolio-btn">
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj6} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                            </div>
+                        </div>
+                    </div>                              
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj3} alt=""/>
@@ -84,18 +94,27 @@ const Projects = () => {
                             </div>
                         </div>
                     </div> 
-                    <div className="col-lg-3 col-md-5 portfolio-item second">
+                    <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
                             <img className="img-fluid" src={proj1} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj1} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sms2"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
+                    <div className="col-lg-3 col-md-5 portfolio-item third">
+                        <div className="portfolio-img rounded overflow-hidden">
+                            <img className="img-fluid notready" src={proj5} alt=""/>
+                            <div className="portfolio-btn">
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj5} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/mernx"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                            </div>
+                        </div>
+                    </div>     
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid" src={proj2} alt=""/>
+                            <img className="img-fluid notready" src={proj2} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj2} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sharepoint"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
@@ -104,22 +123,13 @@ const Projects = () => {
                     </div>                    
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid" src={proj4} alt=""/>
+                            <img className="img-fluid notready" src={proj4} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj4} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/dils"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-3 col-md-5 portfolio-item third">
-                        <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid" src={proj5} alt=""/>
-                            <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj5} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/mernx"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
-                            </div>
-                        </div>
-                    </div>                                                  
+                    </div>                                                                                
                 </AnimationOnScroll>
             </div>
       </div>
