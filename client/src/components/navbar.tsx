@@ -36,8 +36,8 @@ function Navbarr (){
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link as={NavLink} to="/projects_all/mern" className={"nav-link" + (url === "/projects_all/mern" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Nav.Link>                  
-                <div className='nav-link'><Badge bg='warning' text='dark'>Onging site construction</Badge></div>
+                {/* <Nav.Link as={NavLink} to="/projects_all/mern" className={"nav-link" + (url === "/projects_all/mern" ?" active" : "")}><FontAwesomeIcon icon={faCircleUser} /> MERN</Nav.Link>                   */}
+                <div className='nav-link'><Badge style={{fontSize: "12pt"}} bg='warning' text='dark'>Onging site construction</Badge></div>
               </Nav>
               <Nav>
                 <Nav.Link as={NavLink} to="/" className={"nav-link" + (url === "/" ?" active" : "")}><FontAwesomeIcon icon={faHouse}/> Home</Nav.Link>

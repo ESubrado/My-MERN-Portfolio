@@ -2,6 +2,12 @@ import React from "react";
 import { useNavigate, Link} from "react-router-dom";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { NavLink } from "react-router-dom";
+
+import { Button } from "bootstrap";
+import RecordList from "./recordList";
+import Badge from 'react-bootstrap/Badge';
+
 
 const MernProj = () => {
     let navigate = useNavigate();
@@ -24,8 +30,19 @@ const MernProj = () => {
                         <div className="w-full h-screen-proj container-fluid">
                             <div className="container px-8 flex justify-center h-full">                                    
                                 <div className="row g-5 align-items-center">           
-                                    <div className="col-lg-12">
-                                        <label>Add MERN Project Details Here</label>
+                                    <div className="col-lg-12 m-0">   
+                                        <div className="heading_container">   
+                                            <h2 className="m-0">MERN Table</h2>  
+                                        </div>                                      
+                                        <RecordList />
+                                        <button>
+                                            <NavLink className="nav-link" to="/create">
+                                                Create Record
+                                            </NavLink>
+                                        </button>  
+                                        <div className="text-center fontlogolabel my-3">      
+                                            <Badge bg='danger' className="fontlogolabel" text='light'>Functionality under construction</Badge> 
+                                        </div>      
                                     </div>
                                 </div>
                             </div>
