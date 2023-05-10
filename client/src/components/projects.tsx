@@ -11,12 +11,12 @@ import { faEye, faLink } from '@fortawesome/free-solid-svg-icons'
 
 import 'animate.css/animate.css'
 
-import proj1 from '../assets/images/project-1.jpg';
-import proj2 from '../assets/images/project-2.jpg';
-import proj3 from '../assets/images/project-3.jpg';
-import proj4 from '../assets/images/project-4.jpg';
-import proj5 from '../assets/images/project-5.jpg';
-import proj6 from '../assets/images/project-6.jpg';
+import upskillimg from '../assets/images/upskillImg.jpg';
+import awardsImg from '../assets/images/awardsImg.jpg';
+import schedulerImg from '../assets/images/schedulerImg.jpg';
+import dilsImg from '../assets/images/dilsImg.jpg';
+import mernImg from '../assets/images/mernImg.jpg';
+import alphaImg from '../assets/images/alphaImg.jpg';
 
 
 const Projects = () => {
@@ -78,54 +78,54 @@ const Projects = () => {
                 <AnimationOnScroll animateIn="animate__fadeInUp" duration={2} className='row g-4 portfolio-container'> 
                     <div className="col-lg-3 col-md-5 portfolio-item second">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid notready" src={proj6} alt=""/>
+                            <img className="img-fluid notready" src={alphaImg} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj6} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={alphaImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/alpha"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>                              
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid" src={proj3} alt=""/>
+                            <img className="img-fluid" src={schedulerImg} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj3} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={schedulerImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sms"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div> 
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid" src={proj1} alt=""/>
+                            <img className="img-fluid" src={upskillimg} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj1} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={upskillimg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sms2"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-5 portfolio-item third">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid notready" src={proj5} alt=""/>
+                            <img className="img-fluid" src={mernImg} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj5} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={mernImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/mernx"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>     
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid notready" src={proj2} alt=""/>
+                            <img className="img-fluid notready" src={awardsImg} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj2} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={awardsImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sharepoint"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>                    
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid notready" src={proj4} alt=""/>
+                            <img className="img-fluid notready" src={dilsImg} alt=""/>
                             <div className="portfolio-btn">
-                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={proj4} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
+                                <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={dilsImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/dils"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
