@@ -114,7 +114,7 @@ const Projects = () => {
                     </div>     
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid notready" src={awardsImg} alt=""/>
+                            <img className="img-fluid" src={awardsImg} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={awardsImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/sharepoint"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
@@ -123,7 +123,7 @@ const Projects = () => {
                     </div>                    
                     <div className="col-lg-3 col-md-5 portfolio-item first">
                         <div className="portfolio-img rounded overflow-hidden">
-                            <img className="img-fluid notready" src={dilsImg} alt=""/>
+                            <img className="img-fluid" src={dilsImg} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={dilsImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
                                 <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/dils"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>

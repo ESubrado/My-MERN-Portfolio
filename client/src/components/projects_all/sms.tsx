@@ -12,10 +12,11 @@ import splogo from '../../assets/images/pngsp.png';
 import jquerylogo from '../../assets/images/jquerylogo.png';
 import btstrplogo from '../../assets/images/bootstraplogo.png';
 import kendologo from '../../assets/images/kendologo.png';
+import amchartsLogo from '../../assets/images/amcharts.png';
 
 const SmsProj = () => {
     //let navigate = useNavigate();
-    const [picModalShow, setPicModalShow] = React.useState({showModal: false, image: ''});    
+    const [picModalShow, setPicModalShow] = useState({showModal: false, image: ''});    
 
     return (
         <>
@@ -56,7 +57,8 @@ const SmsProj = () => {
                                             <img className="ml-0 kendologoSize" alt="" title="Telerik Kendo UI" src={kendologo}/>
                                             <img className="ml-0 reactLogoSize" title="jQuery" alt="" src={jquerylogo}/>
                                             <img className="ml-0 spLogoSize" alt="" title="Sharepoint" src={splogo}/>
-                                            <img className="ml-0 btstrapLogoSize" alt="" title="Bootstrap" src={btstrplogo}/>                                                               
+                                            <img className="ml-0 btstrapLogoSize" alt="" title="Bootstrap" src={btstrplogo}/>  
+                                            <img className="ml-1 kendologoSize" title="jQuery" alt="" src={amchartsLogo}/>                                                              
                                         </div>                   
                                     </div>
                                     <div className="col-lg-4 home-about-left mt-5">
