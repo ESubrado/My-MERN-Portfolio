@@ -22,13 +22,13 @@ function Contact(){
                     <div className="col-lg-5 col-md-6 remove-scroll" >
                         <AnimationOnScroll animateIn="animate__fadeInUp" duration={3}>   
                             <p className="mb-2">My address:</p>
-                            <h3 className="fw-bold">123 Street, New York, USA</h3>
+                            <h3 className="fw-bold">935 B. Catarata Street, Batinguel, Dumaguete City, Philippines</h3>
                             <hr className="w-100"/>
                             <p className="mb-2">Call me:</p>
-                            <h3 className="fw-bold">+012 345 6789</h3>
+                            <h3 className="fw-bold">+63 915 421 1919</h3>
                             <hr className="w-100"/>
                             <p className="mb-2">Mail me:</p>
-                            <h3 className="fw-bold">info@example.com</h3>
+                            <h3 className="fw-bold">eug.subradojr@gmail.com</h3>
                             <hr className="w-100"/>
                             <p className="mb-2">Follow me:</p>
                             <div className="d-flex pt-2">

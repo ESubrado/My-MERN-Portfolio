@@ -15,54 +15,54 @@ const Skills = () => {
             <div className="row g-5 align-items-center">           
                 <div className="col-lg-6 remove-scroll">
                     <AnimationOnScroll animateIn="animate__fadeInUp" duration={1} >  
-                        <h1 className="display-5 mb-5">Skills & Experience</h1>
-                        <p className="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
+                        <h1 className="display-5 mb-5">Skills & Experience</h1>                        
+                        <p className="mb-4">These are my top skills acquired during my almost seven (7) years on engaging website development</p>
                         <h3 className="mb-4">My Skills</h3>
                         <div className="row align-items-center">
                             <div className="col-md-6">
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
-                                        <h6 className="font-weight-bold">HTML</h6>
-                                        <h6 className="font-weight-bold">95%</h6>
-                                    </div>                                   
-                                    <ProgressBar height={"10px"} animateOnRender={true} completed={95} maxCompleted={100} isLabelVisible={false}/>                                  
-                                </div>
-                                <div className="skill mb-4">
-                                    <div className="d-flex justify-content-between">
-                                        <h6 className="font-weight-bold">CSS</h6>
+                                        <h6 className="font-weight-bold">Javascript / jQuery</h6>
                                         <h6 className="font-weight-bold">85%</h6>
                                     </div>                                   
-                                    <ProgressBar height={"10px"} bgColor='#ffc107'  animateOnRender={true} completed={85} maxCompleted={100} isLabelVisible={false}/>                                     
+                                    <ProgressBar height={"10px"} animateOnRender={true} completed={85} maxCompleted={100} isLabelVisible={false}/>                                  
                                 </div>
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
-                                        <h6 className="font-weight-bold">PHP</h6>
-                                        <h6 className="font-weight-bold">90%</h6>
+                                        <h6 className="font-weight-bold">CSS / Bootstrap / Responsive Pages</h6>
+                                        <h6 className="font-weight-bold">82%</h6>
                                     </div>                                   
-                                    <ProgressBar height={"10px"} bgColor='#dc3545' animateOnRender={true} completed={90} maxCompleted={100} isLabelVisible={false}/>                                     
+                                    <ProgressBar height={"10px"} bgColor='#ffc107'  animateOnRender={true} completed={82} maxCompleted={100} isLabelVisible={false}/>                                     
+                                </div>
+                                <div className="skill mb-4">
+                                    <div className="d-flex justify-content-between">
+                                        <h6 className="font-weight-bold">Kendo UI</h6>
+                                        <h6 className="font-weight-bold">80%</h6>
+                                    </div>                                   
+                                    <ProgressBar height={"10px"} bgColor='#dc3545' animateOnRender={true} completed={80} maxCompleted={100} isLabelVisible={false}/>                                     
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
-                                        <h6 className="font-weight-bold">Javascript</h6>
-                                        <h6 className="font-weight-bold">90%</h6>
+                                        <h6 className="font-weight-bold">Sharepoint Front End and CAMLQuery</h6>
+                                        <h6 className="font-weight-bold">80%</h6>
                                     </div>                                   
-                                    <ProgressBar height={"10px"} bgColor='#198754' animateOnRender={true} completed={90} maxCompleted={100} isLabelVisible={false}/>                                     
+                                    <ProgressBar height={"10px"} bgColor='#198754' animateOnRender={true} completed={80} maxCompleted={100} isLabelVisible={false}/>                                     
                                 </div>
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
-                                        <h6 className="font-weight-bold">Angular JS</h6>
-                                        <h6 className="font-weight-bold">95%</h6>
+                                        <h6 className="font-weight-bold">React and MERN</h6>
+                                        <h6 className="font-weight-bold">75%</h6>
                                     </div>                                   
-                                    <ProgressBar height={"10px"} bgColor='#000' animateOnRender={true} completed={95} maxCompleted={100} isLabelVisible={false}/>
+                                    <ProgressBar height={"10px"} bgColor='#000' animateOnRender={true} completed={75} maxCompleted={100} isLabelVisible={false}/>
                                 </div>
                                 <div className="skill mb-4">
                                     <div className="d-flex justify-content-between">
-                                        <h6 className="font-weight-bold">Wordpress</h6>
-                                        <h6 className="font-weight-bold">85%</h6>
+                                        <h6 className="font-weight-bold">Angular 2+</h6>
+                                        <h6 className="font-weight-bold">65%</h6>
                                     </div>                                   
-                                    <ProgressBar height={"10px"} bgColor='#0dcaf0' animateOnRender={true} completed={85} maxCompleted={100} isLabelVisible={false}/>                                     
+                                    <ProgressBar height={"10px"} bgColor='#0dcaf0' animateOnRender={true} completed={65} maxCompleted={100} isLabelVisible={false}/>                                     
                                 </div>
                             </div>
                         </div>
@@ -75,57 +75,45 @@ const Skills = () => {
                             <Tab eventKey="firstSk" title="Experience">
                                 <div className="row gy-5 gx-4">
                                     <div className="col-sm-6">
-                                        <h5>UI Designer</h5>
+                                        <h5>Internal IT Auditor</h5>
                                         <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
-                                        <h6 className="mb-0">Apex Software Inc</h6>
+                                        <p className="text-primary mb-1">2013 - 2014</p>
+                                        <h6 className="mb-0">Silliman University</h6>
                                     </div>
                                     <div className="col-sm-6">
-                                        <h5>Product Designer</h5>
+                                        <h5>Customer Service Representative</h5>
                                         <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
-                                        <h6 className="mb-0">Apex Software Inc</h6>
+                                        <p className="text-primary mb-1">2014 - 2015</p>
+                                        <h6 className="mb-0">Qualfon Inc.</h6>
                                     </div>
                                     <div className="col-sm-6">
-                                        <h5>Web Designer</h5>
+                                        <h5>Front-end and Sharepoint Developer</h5>
                                         <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
-                                        <h6 className="mb-0">Apex Software Inc</h6>
+                                        <p className="text-primary mb-1">2015 - 2021</p>
+                                        <h6 className="mb-0">Xtensa Inc</h6>
                                     </div>
                                     <div className="col-sm-6">
-                                        <h5>Apps Designer</h5>
+                                        <h5>Senior Software Engineer / Tech Lead</h5>
                                         <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
-                                        <h6 className="mb-0">Apex Software Inc</h6>
+                                        <p className="text-primary mb-1">2021 - Present</p>
+                                        <h6 className="mb-0">Xtensa Inc</h6>
                                     </div>
                                 </div>
                             </Tab>
                             <Tab eventKey="secondSK" title="Education">
                                 <div className="row gy-5 gx-4">
                                     <div className="col-sm-6">
-                                        <h5>UI Design Course</h5>
+                                        <h5>Bachelor Degree on Computer Engineering</h5>
                                         <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
+                                        <p className="text-primary mb-1">2003 - 2007</p>
                                         <h6 className="mb-0">Cambridge University</h6>
                                     </div>
                                     <div className="col-sm-6">
-                                        <h5>IOS Development</h5>
+                                        <h5>ISC2 Certificate on Cybersecurity (Ongoing) </h5>
                                         <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
-                                        <h6 className="mb-0">Cambridge University</h6>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <h5>Web Design</h5>
-                                        <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
-                                        <h6 className="mb-0">Cambridge University</h6>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <h5>Apps Design</h5>
-                                        <hr className="text-primary my-2"/>
-                                        <p className="text-primary mb-1">2000 - 2045</p>
-                                        <h6 className="mb-0">Cambridge University</h6>
-                                    </div>
+                                        <p className="text-primary mb-1">2023</p>
+                                        <h6 className="mb-0">ISC2 Organization</h6>
+                                    </div>                                    
                                 </div>
                             </Tab>                       
                         </Tabs>

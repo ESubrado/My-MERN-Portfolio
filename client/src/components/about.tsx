@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll"
+import {Link} from "react-router-dom";
 import CountUp from 'react-countup';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,13 +22,14 @@ function AboutMe(){
                                 <h1 className="display-1 mb-0"><CountUp end={7} delay={1} className="text-black-300" /></h1>
                                 <h5 className="mb-0">Years</h5>
                             </div>
-                            <h3 className="lh-base mb-0">of working experience as a web designer & developer</h3>
+                            <h3 className="lh-base mb-0">of working experience as a web site designer & developer</h3>
                         </div>
-                        <p className="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                        <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> Afordable Prices</p>
-                        <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> High Quality Product</p>
+                        <p className='mb-4'><strong>Motto:</strong><i> "Nothing more satisfying than to experience success with people around working hard together in good and bad times.”</i></p>
+                        <p className="mb-4">There are three fundamental keys I've learned during my years in IT on making the project or the career successful. There are: </p>
+                        <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> Dedication to Craft</p>
                         <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> On Time Project Delivery</p>
-                        <a className="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>                    
+                        <p className="mb-3"><FontAwesomeIcon icon={faCircleCheck} /> Confidence, Honesty and Integrity</p>
+                        <Link to="/projects" className="btn btn-primary py-3 px-5 mt-3">See my Accomplished Projects</Link>                   
                     </AnimationOnScroll>   
                 </div>
                 <div className="col-lg-6 remove-scroll">
