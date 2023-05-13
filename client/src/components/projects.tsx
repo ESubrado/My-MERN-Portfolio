@@ -51,7 +51,7 @@ const Projects = () => {
         setTimeout(function(){
             if (filterKey === "*") isotope.current?.arrange({ filter: `*` });            
             else isotope.current?.arrange({ filter: `.${filterKey}` }); 
-        }, 200);                   
+        }, 500);                   
     }, [filterKey]);
 
     const handleFilterKeyChange = (key: string) => () =>{ 
