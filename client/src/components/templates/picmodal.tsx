@@ -11,7 +11,7 @@ const PicModal = (props : any) => {
     return (
         <>
             <Modal {...props.modalControls}
-                size="xl"
+                size={props.modsize ? props.modsize : "xl"}
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
             >

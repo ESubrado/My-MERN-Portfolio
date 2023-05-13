@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import profilePic from "../assets/images/ProfilePic2022.png";
 import { AnimationOnScroll } from "react-animation-on-scroll"
 
@@ -43,7 +43,7 @@ function Home(){
                         building responsive web applications. 
                         </p>
                         <div className="d-flex align-items-center pt-5">
-                            <a href={"#"} className="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                            <Link className="btn btn-primary py-3 px-4 me-5" to="/files/Subrado_EugeneJr.pdf" target="_blank" download>Download CV</Link>                            
                             <button type="button" className="btn-play" data-bs-toggle="modal"
                                 data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                                 <span></span>
