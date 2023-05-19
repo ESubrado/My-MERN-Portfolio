@@ -1,16 +1,19 @@
-import React from "react";
-import { useNavigate, Link} from "react-router-dom";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { NavLink } from "react-router-dom";
+import Button from "react-bootstrap/esm/Button";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-import { Button } from "bootstrap";
+import MernInstModal from "../templates/mernInstructionModal";
 import RecordList from "./recordList";
 import Badge from 'react-bootstrap/Badge';
 
 
 const MernProj = () => {
-    let navigate = useNavigate();
+    const [mernInstModalShow, setMernInstModalShow] = useState({showModal: false, modsize: ''}); 
 
     return (
         <>
@@ -31,10 +34,17 @@ const MernProj = () => {
                             <div className="flex justify-center">                                    
                                 <div className="row align-items-center">           
                                     <div className="col-lg-12 m-0">   
-                                        <div className="heading_container mt-3">   
-                                            <h2 className="m-0">MERN Table</h2>  
-                                            <Badge bg='danger' className="fontlogolabel" text='light'>Functionality under construction</Badge> 
-                                        </div>                                      
+                                        <div className="my-3"> 
+                                            <Row>
+                                                <Col xs lg="6">
+                                                    <Badge bg='danger' className="fontlogolabel" text='light'>Functionality under construction</Badge>
+                                                    <h2 className="m-0">MERN Table</h2> 
+                                                </Col>
+                                                <Col xs lg="6" className="">
+                                                    <Button onClick={() => setMernInstModalShow({showModal: true, modsize: 'lg'})} variant="primary" className="float-right">MERN Operation Instructions</Button>
+                                                </Col>
+                                            </Row> 
+                                        </div>                                                                         
                                         <RecordList />
                                         <button className="pt-3">
                                             <NavLink className="nav-link" to="/create">
@@ -47,9 +57,17 @@ const MernProj = () => {
                         </div>
                         
                     </div>
-                </AnimationOnScroll>
-                
+                </AnimationOnScroll>                
             </div>  
+
+            <MernInstModal
+                modalControls={{
+                    show: mernInstModalShow.showModal,
+                    onHide: () => setMernInstModalShow({showModal:false, modsize: 'lg'})
+                }}   
+                show={mernInstModalShow.showModal} 
+                modsize={mernInstModalShow.modsize}
+            />    
         </>
    
    ); 

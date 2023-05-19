@@ -69,7 +69,7 @@ const AwardsProj = () => {
             <PicModal
                 modalControls={{
                     show: picModalShow.showModal,
-                    onHide: () => setPicModalShow({showModal:false, image: '', modsize: ''})
+                    onHide: () => setPicModalShow({showModal:false, image: '', modsize: 'md'})
                 }}   
                 show={picModalShow.showModal}             
                 url={picModalShow.showModal ? picModalShow.image : ''} 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link} from "react-router-dom";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
@@ -15,7 +15,7 @@ import kendologo from '../../assets/images/kendologo.png';
 import amchartsLogo from '../../assets/images/amcharts.png';
 
 const DilsProj = () => {
-    const [picModalShow, setPicModalShow] = React.useState({showModal: false, image: '', modsize: ''}); 
+    const [picModalShow, setPicModalShow] = useState({showModal: false, image: '', modsize: ''}); 
     
     return (
         <>
@@ -76,7 +76,7 @@ const DilsProj = () => {
             <PicModal
                 modalControls={{
                     show: picModalShow.showModal,
-                    onHide: () => setPicModalShow({showModal:false, image: '', modsize: ''})
+                    onHide: () => setPicModalShow({showModal:false, image: '', modsize: 'md'})
                 }}   
                 show={picModalShow.showModal}             
                 url={picModalShow.showModal ? picModalShow.image : ''} 
