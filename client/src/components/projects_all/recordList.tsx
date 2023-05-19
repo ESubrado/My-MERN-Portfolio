@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
+import products from "../../assets/data/products.json";
+
+import '@progress/kendo-theme-default/dist/all.css';
  
 const Record = (props:any) => (
  <tr>
@@ -34,6 +38,12 @@ export default function RecordList() {
      }
  
      const records = await response.json();
+
+     //setting ids
+     for(var i=0; i<records.length; i++){
+      records[i].id = i+1
+     }
+
      setRecords(records);
    }
  
@@ -66,20 +76,39 @@ export default function RecordList() {
  }
  
  // This following section will display the table with the records of individuals.
- return (
-   <div>
-     <h3>Record List</h3>
-     <table className="table table-striped" style={{ marginTop: 20 }}>
-       <thead>
-         <tr>
-           <th>Name</th>
-           <th>Position</th>
-           <th>Level</th>
-           <th>Action</th>
-         </tr>
-       </thead>
-       <tbody>{recordList()}</tbody>
-     </table>
-   </div>
- );
+//  return (
+//    <div>
+//      <h3>Record List</h3>
+//      <table className="table table-striped" style={{ marginTop: 20 }}>
+//        <thead>
+//          <tr>
+//            <th>Name</th>
+//            <th>Position</th>
+//            <th>Level</th>
+//            <th>Action</th>
+//          </tr>
+//        </thead>
+//        <tbody>{recordList()}</tbody>
+//      </table>
+//    </div>
+//  );
+
+
+return (
+  <Grid
+    style={{
+        height: "400px",
+    }}
+    data={records}
+  >
+    <Column field="id" title="ID" width="40px" />
+    <Column field="name" title="Name" width="250px" />
+    <Column field="position" title="Position" />
+    <Column field="level" title="Level" />    
+    <Column field="_id" title="Hash ID" />    
+  </Grid>
+);
+
+
 }
+
