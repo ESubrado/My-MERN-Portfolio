@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import MernInstModal from "../templates/mernInstructionModal";
-import RecordList from "./recordList";
+import MainList from "../mern_dal/recordList";
 import Badge from 'react-bootstrap/Badge';
 
 
@@ -45,7 +45,7 @@ const MernProj = () => {
                                                 </Col>
                                             </Row> 
                                         </div>                                                                         
-                                        <RecordList />
+                                        <MainList />
                                         <button className="pt-3">
                                             <NavLink className="nav-link" to="/create">
                                                 Create Record
