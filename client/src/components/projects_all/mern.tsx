@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "bootstrap";
-import RecordList from "./recordList";
+import RecordList from "../mern_dal/recordList";
 
 function Mern(){
     return (

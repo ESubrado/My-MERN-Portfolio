@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbarr from "./components/navbar";
 //import RecordList from "./components/recordList";
 import Edit from "./components/projects_all/edit";
-import Create from "./components/projects_all/create";
+// import Create from "./components/mern/create";
 import Home from "./components/home";
 import AboutMe from "./components/about";
 import Mern from "./components/projects_all/mern";
@@ -31,7 +31,7 @@ function App() {
         {/* <Route exact path="/" element={<RecordList />} />*/}
         <Route path="/" element={<Home/>}/>
         <Route path="/edit/:id" element={<Edit/>} />
-        <Route path="/create" element={<Create/>} />        
+        {/* <Route path="/create" element={<Create/>} />         */}
         <Route path="/about" element={<AboutMe/>}/>
         <Route path="/projects_all/mern" element={<Mern/>}/>
         <Route path="/contact" element={<Contact/>}/>
