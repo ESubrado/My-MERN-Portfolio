@@ -11,13 +11,13 @@ import { Error } from "@progress/kendo-react-labels";
 import level from "../../assets/data/level.json";
 import { UserData } from "../interface/interfaces";
 
-interface EditFormProps {
+interface FormProps {
     cancelEdit: () => void;
     onSubmit: (event? : any) => void;
     user: UserData;
 }
 
-const EditForm = (props: EditFormProps) => {
+const UserForm = (props: FormProps) => {
     return (
       <Dialog title={`Edit ${props.user.name}`} onClose={props.cancelEdit}>
         <Form
@@ -73,4 +73,4 @@ const EditForm = (props: EditFormProps) => {
     );
   };
 
-  export default EditForm;
+  export default UserForm;

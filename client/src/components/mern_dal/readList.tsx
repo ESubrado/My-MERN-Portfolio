@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
-//import { Link } from "react-router-dom";
 import { 
   Grid, 
   GridColumn as Column,
   GridCellProps
 } from "@progress/kendo-react-grid";
 
-import EditForm from "./editform";
+import UserForm from "../templates/userForm";
 import { UserData } from "../interface/interfaces";
+import {getRecords, UpdateEntry} from "./MainCRUD"
 import '@progress/kendo-theme-default/dist/all.css'; 
 
 interface EditCommandCellProps extends GridCellProps {
@@ -28,65 +27,32 @@ const EditCommandCell = (props: EditCommandCellProps) => {
   );
 };
 
-export default function RecordList() {
-  //const navigate = useNavigate();
-  const [openForm, setOpenForm] = useState<boolean>(false);
+export default function ReadList() { 
+  const [openForm, setOpenForm] = useState<boolean>(false);  
   const [editItem, setEditItem] = useState<UserData>({ id: 1 });
   const [records, setRecords] = useState([]);
- 
-  
-  // ------------------ DATABASE OPERATIONS -----------------------------
-  async function getRecords() {
-    const response = await fetch(`http://localhost:5000/record/`);
-
-    if (!response.ok) {
-      const message = `An error occurred: ${response.statusText}`;
-      window.alert(message);
-      return;
-    }
-
-    const records = await response.json();
-    
-    //setting ids
-    for(var i=0; i<records.length; i++){
-      records[i].id = i+1
-    }
-    setRecords(records);
-  }
 
   useEffect(() => { 
-    getRecords();  
+    getRecords((records?: any) => {
+      setRecords(records);
+    });  
     return;
-  }, [records.length]);  
+  }, [records.length]);    
 
   
-  async function updateEntry(event: UserData) {   
-    await fetch(`http://localhost:5000/update/${event._id}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(event),
-    })
-    .catch(error => {
-      window.alert(error);
-      return;
-    });  
-    
-    getRecords();
-    //navigate("/projects_all/mernx"); 
-    //window.location.reload();
-  }
-
-
-  //-------------  UI OPERATIONS ---------------------------
   const enterEdit = (item: UserData) => {
     setOpenForm(true);
     setEditItem(item);
   };  
 
   const handleSubmit = (event : UserData) => {     
-    updateEntry(event);  
+    UpdateEntry(event, (result?: any)=>{
+      if(result.success){
+        getRecords((records?: any) => {
+          setRecords(records);
+        });  
+      }
+    });  
     setOpenForm(false);
   };
 
@@ -100,7 +66,7 @@ export default function RecordList() {
  
   return (
     <>
-        <Grid
+      <Grid
           style={{
               height: "400px",
           }}
@@ -115,7 +81,7 @@ export default function RecordList() {
       </Grid>
 
       {openForm && (
-        <EditForm
+        <UserForm
           cancelEdit={handleCancelEdit}
           onSubmit={handleSubmit}
           user={editItem}
