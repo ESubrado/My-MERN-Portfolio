@@ -108,7 +108,7 @@ const Projects = () => {
                             <img className="img-fluid" src={mernImg} alt=""/>
                             <div className="portfolio-btn">
                                 <a className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" href={mernImg} data-lightbox="portfolio"><FontAwesomeIcon className='mt-2' icon={faEye} /></a>
-                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/mernx"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
+                                <Link className="btn btn-lg-square btn-outline2-secondary border-2 mx-1" to="/projects_all/mern"><FontAwesomeIcon className='mt-2' icon={faLink} /></Link>
                             </div>
                         </div>
                     </div>     
