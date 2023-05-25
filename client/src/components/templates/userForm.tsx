@@ -19,12 +19,12 @@ interface FormProps {
 
 const UserForm = (props: FormProps) => {
     return (
-      <Dialog title={`Edit ${props.user.name}`} onClose={props.cancelEdit}>
+      <Dialog title={`${props.user._id ? "Edit " + props.user.name : "New User"}`} onClose={props.cancelEdit}>
         <Form
           onSubmit={props.onSubmit}
           initialValues={props.user}
           render={(formRenderProps) => (
-            <FormElement style={{ maxWidth: 650 }}>
+            <FormElement style={{ maxWidth: 1050 }}>
               <fieldset className={"k-form-fieldset"}>
                 <div className="mb-3">
                   <Field
@@ -56,7 +56,7 @@ const UserForm = (props: FormProps) => {
                   className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary"
                   disabled={!formRenderProps.allowSubmit}
                 >
-                  Update
+                  {props.user._id ? <span>Update</span> : <span>Create</span>}
                 </button>
                 <button
                   type={"submit"}

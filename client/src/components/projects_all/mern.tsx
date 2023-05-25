@@ -45,12 +45,7 @@ const MernProj = () => {
                                                 </Col>
                                             </Row> 
                                         </div>                                                                         
-                                        <ReadList />
-                                        <button className="pt-3">
-                                            <NavLink className="nav-link" to="/create">
-                                                Create Record
-                                            </NavLink>
-                                        </button>                                            
+                                        <ReadList />                                       
                                     </div>
                                 </div>
                             </div>
