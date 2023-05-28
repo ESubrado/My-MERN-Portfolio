@@ -2,12 +2,7 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-const PicModal = (props : any) => {
-
-    // if(props.show){
-    //     console.log(props.hello)
-    // }
-
+const PicModal = (props : any) => { 
     return (
         <>
             <Modal {...props.modalControls}

@@ -15,7 +15,7 @@ import UserForm from "../templates/userForm";
 import { UserData } from "../interface/interfaces";
 import DialogWindow from "../templates/dialogmodal";
 
-import {getRecords, UpdateEntry, CreateEntry} from "./MainCRUD"
+import {getRecords, UpdateEntry, CreateEntry, DeleteRecord} from "./MainCRUD"
 import '@progress/kendo-theme-default/dist/all.css'; 
 
 interface PageState {
@@ -142,12 +142,21 @@ export default function ReadList() {
 
   const handleNoDialogResp = () => {
     setConfirmWindow(false);
+    setDeleteItem({});
   }
 
   const handleYesDialogResp = (e?: any)=>{
     e.preventDefault(); 
-    console.log(deleteItem);
     setConfirmWindow(false)
+
+    if(deleteItem._id){
+      DeleteRecord(deleteItem._id, (response?: any)=> {
+          if(response.success){
+            loadRecords(); 
+            setDeleteItem({});
+          }
+      })      
+    }    
   }
 
   const MyEditCommandCell = (props: GridCellProps) => (

@@ -18,13 +18,13 @@ const DialogWindow = (props: DialogProps) => {
                 </p>
                 <DialogActionsBar>
                     <button
-                    className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"
+                    className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-secondary"
                     onClick={props.NoWindow}
                     >
                     No
                     </button>
                     <button
-                    className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"
+                    className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary"
                     onClick={props.YesWindow}                  
                     >
                     Yes
