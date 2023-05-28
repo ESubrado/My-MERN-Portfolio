@@ -52,16 +52,17 @@ export async function CreateEntry(newUser: UserData, callback? : any) {
     return;
   });
 
-  if(callback) callback({success: true})
-  //setForm({ name: "", position: "", level: "" });
-  //navigate("/");
+  if(callback) callback({success: true}) 
 }
 
-export async function DeleteRecord(id: number, callback? : any) {
-  await fetch(`http://localhost:5000/record/${id}`, {
+export async function DeleteRecord(id?: string, callback? : any) {
+  await fetch(`http://localhost:5000/${id}`, {
     method: "DELETE"
+  }).catch(error => {
+    if(callback) callback({error: true})
+      window.alert(error);
+    return;
   });
-
-  //const newRecords = records.filter((el) => el._id !== id);
-  //setRecords(newRecords);
+  
+  if(callback) callback({success: true})
 }

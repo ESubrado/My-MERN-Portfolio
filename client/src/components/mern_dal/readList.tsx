@@ -13,7 +13,9 @@ import { orderBy, SortDescriptor } from "@progress/kendo-data-query";
 
 import UserForm from "../templates/userForm";
 import { UserData } from "../interface/interfaces";
-import {getRecords, UpdateEntry, CreateEntry} from "./MainCRUD"
+import DialogWindow from "../templates/dialogmodal";
+
+import {getRecords, UpdateEntry, CreateEntry, DeleteRecord} from "./MainCRUD"
 import '@progress/kendo-theme-default/dist/all.css'; 
 
 interface PageState {
@@ -23,13 +25,12 @@ interface PageState {
 
 interface EditCommandCellProps extends GridCellProps {
   enterEdit: (item: UserData) => void;
+  deleteData: (item: UserData) => void;
 }
 
-const initialSort: Array<SortDescriptor> = [
-  { field: "id", dir: "desc" },
-];
-
-const initialDataState: PageState = { skip: 0, take: 10 };
+// interface DeleteCommandCellProps extends GridCellProps {
+//   deleteData: (item: UserData) => void;
+// }
 
 const EditCommandCell = (props: EditCommandCellProps) => {
   return (
@@ -40,15 +41,41 @@ const EditCommandCell = (props: EditCommandCellProps) => {
       >
         Edit
       </button>
+      <button
+        className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-secondary ml-1"
+        onClick={() => props.deleteData(props.dataItem)}
+      >
+        Delete
+      </button>
     </td>
   );
 };
 
+// const DeleteCommandCell = (props: DeleteCommandCellProps) => {
+//   return (
+//     <td>
+//        <button
+//         className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary"
+//         onClick={() => props.deleteData(props.dataItem)}
+//       >
+//         Delete
+//       </button>
+//     </td>
+//   );
+// };
+
+const initialSort: Array<SortDescriptor> = [
+  { field: "id", dir: "desc" },
+];
+const initialDataState: PageState = { skip: 0, take: 10 };
+
 export default function ReadList() { 
   const [openForm, setOpenForm] = useState<boolean>(false);  
   const [editItem, setEditItem] = useState<UserData>({});
+  const [deleteItem, setDeleteItem] = useState<UserData>({});
   const [records, setRecords] = useState([]);
-  const [sort, setSort] = React.useState(initialSort);
+  const [sort, setSort] = useState(initialSort);
+  const [confirmWin, setConfirmWindow] = useState<boolean>(false);
 
   //for paganation
   const [page, setPage] = React.useState<PageState>(initialDataState);
@@ -83,8 +110,8 @@ export default function ReadList() {
   const enterEdit = (item: UserData) => {
     setOpenForm(true);
     setEditItem(item);
-  };    
-
+  };     
+  
   const handleSubmit = (event : UserData) => {  
     
     if(event._id){ //for update
@@ -108,9 +135,37 @@ export default function ReadList() {
     setOpenForm(false);
   };
 
+  const deleteData = (item:UserData) => {
+    setConfirmWindow(true);
+    setDeleteItem(item);
+  }
+
+  const handleNoDialogResp = () => {
+    setConfirmWindow(false);
+    setDeleteItem({});
+  }
+
+  const handleYesDialogResp = (e?: any)=>{
+    e.preventDefault(); 
+    setConfirmWindow(false)
+
+    if(deleteItem._id){
+      DeleteRecord(deleteItem._id, (response?: any)=> {
+          if(response.success){
+            loadRecords(); 
+            setDeleteItem({});
+          }
+      })      
+    }    
+  }
+
   const MyEditCommandCell = (props: GridCellProps) => (
-    <EditCommandCell {...props} enterEdit={enterEdit} />
+    <EditCommandCell {...props} enterEdit={enterEdit} deleteData={deleteData}/>
   );  
+
+  // const deleteRecordCommCell = (props: GridCellProps)=> (
+  //   <DeleteCommandCell {...props} deleteData={deleteData} />
+  // )
 
   const addRecord = () => {
     setOpenForm(true);
@@ -153,7 +208,7 @@ export default function ReadList() {
         <Column field="position" title="Position" />
         <Column field="level" title="Level" />    
         <Column field="_id" title="Hash ID" /> 
-        <Column cell={MyEditCommandCell} />   
+        <Column cell={MyEditCommandCell} />        
       </Grid>
 
       {openForm && (
@@ -161,6 +216,15 @@ export default function ReadList() {
           cancelEdit={handleCancelEdit}
           onSubmit={handleSubmit}
           user={editItem}
+        />
+      )}
+
+      {confirmWin && (
+        <DialogWindow
+          NoWindow={handleNoDialogResp}
+          YesWindow={handleYesDialogResp}
+          user={deleteItem}
+          isDelete={true}
         />
       )}
     </>
