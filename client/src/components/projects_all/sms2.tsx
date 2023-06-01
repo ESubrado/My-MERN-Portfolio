@@ -27,8 +27,7 @@ const SmsProj2 = () => {
                             <Breadcrumb.Item linkAs={Link} linkProps={{to: "/"}}>Home</Breadcrumb.Item>
                             <Breadcrumb.Item linkAs={Link} linkProps={{to: "/projects"}}>Projects</Breadcrumb.Item>
                             <Breadcrumb.Item active>Upskilling</Breadcrumb.Item>
-                        </Breadcrumb>
-                    {/* <button className="btn btn-secondary" onClick={() => navigate(-1)}>Back</button>                        */}
+                        </Breadcrumb>                   
                     </div>
                    
                 </div>    
