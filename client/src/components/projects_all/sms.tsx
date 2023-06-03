@@ -14,8 +14,7 @@ import btstrplogo from '../../assets/images/bootstraplogo.png';
 import kendologo from '../../assets/images/kendologo.png';
 import amchartsLogo from '../../assets/images/amcharts.png';
 
-const SmsProj = () => {
-    //let navigate = useNavigate();
+const SmsProj = () => {    
     const [picModalShow, setPicModalShow] = useState({showModal: false, image: ''});    
 
     return (
