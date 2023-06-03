@@ -16,7 +16,7 @@ import azurelogo from '../../assets/images/azurelogo.png'
 
 
 const AlphaProj = () => {
-    const [picModalShow, setPicModalShow] = useState({showModal: false, image: '', modsize: ''}); 
+    const [picModalShow, setPicModalShow] = useState({showModal: false, image: [''], modsize: ''}); 
 
     return (
         <>
@@ -62,7 +62,7 @@ const AlphaProj = () => {
                                         </div>                   
                                     </div>
                                     <div className="col-lg-4 home-about-left my-4">
-                                        <img className="img-fluid modal-img" src={alphaMainPhoto} alt="" onClick={() => setPicModalShow({showModal: true, image: 'alp_4.jpg', modsize: 'xxl'} )}/>                                                            
+                                        <img className="img-fluid modal-img" src={alphaMainPhoto} alt="" onClick={() => setPicModalShow({showModal: true, image: ['alp_1.jpg', 'alp_3.jpg', 'alp_4.jpg'], modsize: 'xxl'} )}/>                                                            
                                     </div>  
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ const AlphaProj = () => {
             <PicModal
                 modalControls={{
                     show: picModalShow.showModal,
-                    onHide: () => setPicModalShow({showModal:false, image: '', modsize: ''})
+                    onHide: () => setPicModalShow({showModal:false, image: [''], modsize: ''})
                 }}   
                 show={picModalShow.showModal}             
                 url={picModalShow.showModal ? picModalShow.image : ''}                
