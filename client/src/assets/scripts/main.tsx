@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+//import React from 'react';
+//import ReactDOM from 'react-dom';
 
 import jQuery from "jquery"
 import $ from "jquery"
@@ -12,7 +12,7 @@ window.WOW = WOW;
 window.Typed = Typed;
 
 (function ($) {
-    "use strict";   
+    //"use strict";   
     
     // Spinner
     var spinner = function () {

@@ -24,7 +24,7 @@ const containerStyle = {
 
 const Mailto = ({ email, subject, body, children } : any) => {
     return (
-      <a className="btn btn-primary py-3 px-5" target="_blank" href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`}>{children}</a>
+      <a className="btn btn-primary py-3 px-5" rel="noreferrer" target="_blank" href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`}>{children}</a>
     );
 };
 
@@ -61,9 +61,9 @@ const Contact = () => {
                             <hr className="w-100"/>
                             <p className="mb-2">Follow me:</p>
                             <div className="d-flex pt-2">     
-                                <a className="btn btn-square btn-primary me-2" target="_blank" href="https://www.linkedin.com/in/eugene-jr-s-338aa2120/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                                <a className="btn btn-square btn-primary me-2" target="_blank" href="https://www.facebook.com/xteug/"><FontAwesomeIcon icon={faFacebookF} /></a>
-                                <a className="btn btn-square btn-primary me-2" target="_blank" href="https://github.com/ESubrado/"><FontAwesomeIcon icon={faGithubAlt} /></a>
+                                <a className="btn btn-square btn-primary me-2" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/eugene-jr-s-338aa2120/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                                <a className="btn btn-square btn-primary me-2" target="_blank" rel="noreferrer" href="https://www.facebook.com/xteug/"><FontAwesomeIcon icon={faFacebookF} /></a>
+                                <a className="btn btn-square btn-primary me-2" target="_blank" rel="noreferrer" href="https://github.com/ESubrado/"><FontAwesomeIcon icon={faGithubAlt} /></a>
                             </div>
                         </AnimationOnScroll>                       
                     </div>

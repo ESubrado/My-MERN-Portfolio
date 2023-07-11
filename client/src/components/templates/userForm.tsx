@@ -5,9 +5,10 @@ import {
   Field,
   FormElement
 } from "@progress/kendo-react-form";
-import { Input, NumericTextBox } from "@progress/kendo-react-inputs";
+import { Input } from "@progress/kendo-react-inputs";
+// import { Input, NumericTextBox } from "@progress/kendo-react-inputs";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
-import { Error } from "@progress/kendo-react-labels";
+// import { Error } from "@progress/kendo-react-labels";
 import level from "../../assets/data/level.json";
 import { UserData } from "../interface/interfaces";
 
