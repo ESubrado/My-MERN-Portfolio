@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import profilePic from "../assets/images/ProfilePic2022.png";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Badge from 'react-bootstrap/Badge';

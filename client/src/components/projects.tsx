@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Isotope from "isotope-layout";
 //import { data } from "../assets/data/data";
 

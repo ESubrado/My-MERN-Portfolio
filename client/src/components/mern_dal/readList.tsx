@@ -103,9 +103,10 @@ export default function ReadList() {
   }
 
   useEffect(() => { 
-    loadRecords();
-    return;
-  }, [records.length]);  
+    getRecords((records?: any) => {
+      setRecords(orderBy(records, sort));
+    });  
+  }, [records, sort]);  
   
   const enterEdit = (item: UserData) => {
     setOpenForm(true);
