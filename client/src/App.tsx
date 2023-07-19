@@ -16,6 +16,8 @@ import SmsProj from './components/projects_all/sms';
 import SmsProj2 from './components/projects_all/sms2';
 import DilsProj from './components/projects_all/dils';
 import MernProj from './components/projects_all/mern';
+import Playground from './components/playground';
+
 //import useScript from "./components/hooks";
 //import Footer from './components/footer';
 
@@ -34,7 +36,8 @@ function App() {
         <Route path="/projects_all/sms" element={<SmsProj/>}/> 
         <Route path="/projects_all/sms2" element={<SmsProj2/>}/> 
         <Route path="/projects_all/dils" element={<DilsProj/>}/>     
-        <Route path="/projects_all/mern" element={<MernProj/>}/>                
+        <Route path="/projects_all/mern" element={<MernProj/>}/> 
+        <Route path="/playground" element={<Playground/>}/>               
       </Routes> 
       {/* <Footer/>   */}
     </>    
