@@ -3,11 +3,13 @@ import { AnimationOnScroll } from "react-animation-on-scroll"
 import {Link} from "react-router-dom";
 import CountUp from 'react-countup';
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 
 import about1 from "../assets/images/about-1.jpg";
 import about2 from "../assets/images/about-2.jpg";
+import ChildrenString from "./templates/children";
 
 
 function AboutMe(){
@@ -41,11 +43,11 @@ function AboutMe(){
                             <div className="col-sm-6">
                                 <img className="img-fluid rounded" src={about2} alt=""/>
                             </div>
-                        </div>
-                        <div className="d-flex align-items-center mb-3">
+                        </div>                        
+                        <ChildrenString classes="d-flex align-items-center mb-3">
                             <h5 className="border-end pe-3 me-3 mb-0">Happy Clients</h5>
                             <h2 className="text-primary fw-bold mb-0"><CountUp end={10000} delay={1} /> +</h2>
-                        </div>
+                        </ChildrenString> 
                         <p className="mb-4">Estimated number of clients who are covered with the projects (both new and revamped) in which I am the main contributor. This is a team effort.</p>
                         <div className="d-flex align-items-center mb-3">
                             <h5 className="border-end pe-3 me-3 mb-0">Projects Completed (Enterprise)</h5>
