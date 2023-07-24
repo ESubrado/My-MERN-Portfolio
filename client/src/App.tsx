@@ -37,7 +37,7 @@ function App() {
         <Route path="/projects_all/sms2" element={<SmsProj2/>}/> 
         <Route path="/projects_all/dils" element={<DilsProj/>}/>     
         <Route path="/projects_all/mern" element={<MernProj/>}/> 
-        <Route path="/playground" element={<Playground/>}/>               
+        <Route path="/play" element={<Playground/>}/>               
       </Routes> 
       {/* <Footer/>   */}
     </>    
