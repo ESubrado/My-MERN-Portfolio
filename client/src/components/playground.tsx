@@ -5,6 +5,7 @@ import MealsProvider from './states/mealprovider';
 import MealList from './states/mealsList';
 import Counter from './states/counter';
 import ReducerExecute from './states/reducer';
+import SimpleCalculator from './states/calculator';
 
 interface Props {
     children: string;
@@ -27,14 +28,16 @@ const Playground = () => {
             <div className='w-full h-screen container-fluid mt-0'>
                 <div className="px-8 h-full">
                     <div className='row border m-3 p-3'>
-                        <div className='col-12'>
+                        <h6>Sample Children</h6>
+                        <div className='col-12 text-center'>
                             {displayAlert && <Alert key="primary" variant="primary" onClose={()=> showAlert(false)} dismissible>My Alert</Alert>}
                             <AltButton color="primary" children='Click Me Me' onClick={() => showAlert(true)}></AltButton>
                         </div>
                     </div>
                     <div className='row border m-3 p-3'>
-                        <div className='col-12 text-center'>                           
-                            <div>
+                        <div className='col-12'>  
+                            <h6>Sample Provider</h6>                         
+                            <div className='text-center'>
                                 <MealsProvider>
                                     <MealList/>
                                     <Counter/>
@@ -43,10 +46,21 @@ const Playground = () => {
                         </div>
                     </div>     
                     <div className='row border m-3 p-3'>
-                        <div className='col-12 text-center'>                           
-                            <ReducerExecute/>
+                        <div className='col-12'>
+                            <h6>Sample Reducer</h6>   
+                            <div className='text-center'>
+                                <ReducerExecute/>
+                            </div>   
                         </div>
-                    </div>                    
+                    </div>    
+                    <div className='row border m-3 p-3'>
+                        <div className='col-12'>
+                            <h6>Sample ADD Calculator (Use of Useref)</h6>   
+                            <div className='text-center'>
+                                <SimpleCalculator/>
+                            </div>   
+                        </div>
+                    </div>                     
                 </div>  
             </div>
         </>   
