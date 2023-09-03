@@ -6,6 +6,7 @@ import MealList from './states/mealsList';
 import Counter from './states/counter';
 import ReducerExecute from './states/reducer';
 import SimpleCalculator from './states/calculator';
+import SampleUseState from './states/sampleUseState';
 
 interface Props {
     children: string;
@@ -60,7 +61,15 @@ const Playground = () => {
                                 <SimpleCalculator/>
                             </div>   
                         </div>
-                    </div>                     
+                    </div>                   
+                    <div className='row border m-3 p-3'>
+                        <div className='col-12'>
+                            <h6>Sample Use State</h6>   
+                            <div className='text-center'>
+                               <SampleUseState/>
+                            </div>   
+                        </div>
+                    </div>    
                 </div>  
             </div>
         </>   
